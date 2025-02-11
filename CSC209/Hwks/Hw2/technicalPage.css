@@ -14,7 +14,6 @@
     font-size: 35px;
     color: rgb(0, 0, 0);
   }
-  
   /* Create two columns/boxes that floats next to each other */
   nav {
     float: left;
@@ -31,11 +30,9 @@
   }
   
   article {
-    float: left;
+    float: right;
     padding: 20px;
     width: 70%;
-    background-color: #ffffff;
-    height: 300px; /* only for demonstration, should be removed */
   }
   
   /* Clear floats after the columns */
@@ -46,10 +43,11 @@
   }
   
   /* Style the footer */
-  footer {
+  /* footer {
     background-color: #777;
     padding: 10px;
     text-align: center;
     color: white;
-  }
+  } */
+ 
   
