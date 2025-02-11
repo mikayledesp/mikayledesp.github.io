@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+<p>JavaScript can change the content of an HTML element:</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo">This is a demonstration.</p>
+
+<script>
+function myFunction() { 
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
+
+<script>
+    function displayText() {
+  var text = document.getElementById("textField");
+  text.style.display = "block";
+}
+</script>
+<button onclick="displayText()">Read Course Description</button>
+
+<div id="textField" style="display: none;">
+  This is the text that appears when you click the button.
+</div>
+
+</body>
+</html>
