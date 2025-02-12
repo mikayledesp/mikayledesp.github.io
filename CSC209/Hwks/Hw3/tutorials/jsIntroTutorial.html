@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Intro JS Tut </title>
+</head>
+<body>
+<h1>Javascript Intro Tutorials </h1>
+<h2>Changing Attributes Using JS </h2>
+<p> Explanation: using buttons to change photo</p>
+<button onclick="document.getElementById('myImage').src='../images/beyoncepic1.jpg' ">Change to photo 1</button>
+
+<img id="myImage" src="../images/beyoncepic2.jpg" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='../images/beyoncepic2.jpg'">Change to photo 2</button>
+<h2>Hiding HTML Elements </h2>
+<p id="demo"> You've revealed a secret element.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Hide</button>
+<h2>Revealing HTML Elements</h2>
+<p id="demo2" style="display: none;">Surprise!</p>
+<button type="button" onclick="document.getElementById('demo2').style.display='block'">Reveal</button>
+</body>
