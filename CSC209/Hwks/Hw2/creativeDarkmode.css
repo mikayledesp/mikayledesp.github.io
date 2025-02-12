@@ -10,7 +10,7 @@
   
   /* Style the header */
   header {
-    padding: 10px;
+    /* padding: 10px; */
     text-align: center;
     font-size: 32px;
     color: #eab5c5;
@@ -52,5 +52,9 @@
     padding: 10px;
   }
  
-
+/* Rounded border */
+hr.rounded {
+  border-top: 2px solid #eab5c5;
+  border-radius: 5px;
+}
  
