@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> HTML Layout Tutorial</title>
+<link id="theme" rel="stylesheet" 
+type="text/css" href="creativePage.css" />
+
+</head>
+<body>
+<header>
+  <img src="IMG_7255.jpeg " width="500px" height="300px">
+  <h2>Mikayle's Top Travel Guide! </h2>
+  <script>
+    function displayText() {
+  var text = document.getElementById("textField");
+  text.style.display = "block";
+}
+</script>
+<button onclick="displayText()">About Travel Guide</button>
+
+<div id="textField" style="display: none; font-size: small;">
+  <p>	
+    This travel guide incases a review on all of the place I've been to and includes pictures I took while there!  </p>
+</div>
+<p id="aboveText"> Change Website Color </p>
+<button onclick="toggleTheme()">Switch</button>
+    <script>
+        function toggleTheme() {
+
+            let theme = document.getElementById('theme');
+          // if statement that changes theme from light to dark css style sheet  
+            if (theme.getAttribute('href') == 'creativePage.css') {
+                theme.setAttribute('href', 'creativeDarkmode.css');
+            } else {
+                theme.setAttribute('href', 'creativePage.css');
+            }
+        }
+    </script>
+</header>
+
+<section>
+  <h4 style="text-align: center;">Time Taken: Approx. 2 Hours </h4>
+  <nav>
+    <ul>
+      <li><h2>Menu</h2></li>
+      <li>Mikayle Despaigne</li>
+      <br>
+      <li><a href="#">Home</a></li>
+      <li><a href="https://travel.usnews.com/rankings/best-affordable-usa-destinations/">List of cheapest vacation spots</a></li>
+      <br>
+      <li><a href="https://www.expedia.com">Expedia</a></li>
+      <li><a href="https://www.hotels.com">Hotels.com</a></li>
+    </ul>
+  </nav>
+  
+   <article> 
+    <table style="width:100%;">
+      <tr style="background-color: #390f1c;">
+        <th>Destination</th>
+        <th>Pros and Cons </th>
+        <th>Rating</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tu 9/1</td>
+        <td>Lectures 1 + 2</td>
+        <td>Intoduction. Case Study : some basic linear time algorithms.</td>
+        <td style="text-align: center;"> - </td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Thur 9/8</td>
+        <td>Lecture 3</td>
+        <td>Algorithm Analysis : Asymptomatic analysis : Big Oh and orders of growth. Worst case, best Case analysis.</td>
+        <td>EX 1 
+          <br>
+          Hw 1
+        </td>
+      </tr>
+    </table>
+   
+
+    </article> 
+</section>
+
+</body>
+</html>
+

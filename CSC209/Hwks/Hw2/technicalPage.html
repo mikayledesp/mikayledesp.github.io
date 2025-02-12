@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
 <title> HTML Layout Tutorial</title>
-<link rel="stylesheet" href="technicalPage.css">
-<style>
-  table, th, td {
-    border:1px solid black;
-  }
-  </style>
+<link id="theme" rel="stylesheet" 
+type="text/css" href="technicalPage.css" />
+
 </head>
 <body>
 <header>
@@ -26,9 +23,25 @@
   <p>	
     This course covers the fundamentals of programming for the web. Students explore client-side development using HTML, CSS, JavaScript and jQuery to craft interactive and visually appealing web experiences. Next, the course transitions to server-side programming, using PHP and AJAX to build robust and responsive web applications. The course also covers foundational topics in software design and project development through both hands-on projects and guided instruction. Prerequisite: CSC 120 or CSC 210. Enrollment limited to 30.</p>
 </div>
+<p id="aboveText"> Change to Dark Mode </p>
+<button onclick="toggleTheme()">Switch</button>
+    <script>
+        function toggleTheme() {
+
+            let theme = document.getElementById('theme');
+          // if statement that changes theme from light to dark css style sheet  
+            if (theme.getAttribute('href') == 'technicalPage.css') {
+                theme.setAttribute('href', 'technicalDarkmode.css');
+            } else {
+                theme.setAttribute('href', 'technicalPage.css');
+            }
+        }
+    </script>
 </header>
 
 <section>
+  <h3>Time Taken: </h3>
+  <p id="aboveText">Technical Took approx 2.5 Hours</p>
   <nav>
     <ul>
       <li><a href="https://moodle.smith.edu/mod/assign/view.php?id=1267628"><h2>CSC 209</h2></a></li>
@@ -46,7 +59,7 @@
   
    <article> 
     <table style="width:100%;">
-      <tr style="background-color: rgb(255, 230, 7);">
+      <tr style="background-color: rgb(176, 160, 7);">
         <th>Week</th>
         <th>Date</th>
         <th>Lecture</th>

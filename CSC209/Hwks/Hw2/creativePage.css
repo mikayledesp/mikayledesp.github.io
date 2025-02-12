@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eab5c5;
+    color: #661c32;
+  }
+  
+  /* Style the header */
+  header {
+    padding: 10px;
+    text-align: center;
+    font-size: 32px;
+    color: #661c32;
+  }
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: right;
+    padding: 20px;
+    width: 70%;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  table, th, td {
+    border:3px solid black;
+
+  }
+  
+  #aboveText{
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  a {
+    color: #661c32;
+  }
+  th{
+    color: #eab5c5;
+  }
+ 
