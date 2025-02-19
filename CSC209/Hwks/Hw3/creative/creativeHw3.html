@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 <title> HTML Layout Tutorial</title>
-<link id="theme" rel="stylesheet" 
-type="text/css" href="creativeHw3.css" />
+<link id="theme" rel="stylesheet" href="css/creativeHw3.css">
 <style>
  nav {
     float: left;
@@ -17,20 +16,6 @@ type="text/css" href="creativeHw3.css" />
 <header>
   <img src="https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="500px" height="300px">
   <h2>Mikayle's Top Travel Guide! </h2>
-  <script>
-    function displayText() {
-  let textField = document.getElementById("textField");
-    let button = document.querySelector("button");
-
-    if (textField.style.display === "none") {
-      textField.style.display = "block";
-      button.textContent = "About Travel Guide";
-    } else {
-      textField.style.display = "none";
-      button.textContent = "About Travel Guide";
-    }
-}
-</script>
 <button onclick="displayText()">About Travel Guide</button>
 
 <div id="textField" style="display: none; font-size: small;">
@@ -39,18 +24,6 @@ type="text/css" href="creativeHw3.css" />
 </div>
 <p id="aboveText"> Change Website Color </p>
 <button onclick="toggleTheme()">Switch</button>
-    <script>
-        function toggleTheme() {
-
-            let theme = document.getElementById('theme');
-          // if statement that changes theme from light to dark css style sheet  
-            if (theme.getAttribute('href') == 'creativeHw3.css') {
-                theme.setAttribute('href', 'creativeDarkMode.css');
-            } else {
-                theme.setAttribute('href', 'creativeHw3.css');
-            }
-        }
-    </script>
 </header>
 
 <section>
@@ -175,7 +148,7 @@ type="text/css" href="creativeHw3.css" />
   </article> 
 </section>
 
-<script src="creativeH3.js"></script>
+<script src="js/creativeH3.js"></script>
 
 </body>
 </html>
