@@ -1,0 +1,11 @@
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "purple";
+ctx.fillRect(0,0,450,275);
+ctx.beginPath();
+ctx.arc(195, 150, 140, 0, 2 * Math.PI);
+ctx.stroke();
+// const ctx = canvas.getContext("2d");
+// ctx.font = "50px Arial";
+// ctx.fillStyle = "white";
+// ctx.fillText("Hello World",100,800);

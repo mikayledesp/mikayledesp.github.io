@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+      <h1>HTML DOM Input Button and Checkbox</h1> 
+       <h2>Input Button Object</h2>
+       <p>Try me button will create an input button each time you click it</p>
+       <button onclick="myFunction()">Try it</button>
+       <script>
+        function myFunction(){
+            var x = document.createElement("INPUT");
+            x.setAttribute("type", "button");
+            x.setAttribute("value", "Click me");
+            document.body.appendChild(x);
+        }
+       </script>
+       <h2>Check box with button</h2>
+       Checkbox: <input type="checkbox" id="myCheck">
+       <button onclick="checkBox()">Check terms</button>
+       <script>
+        function checkBox(){
+            var x = document.getElementById("myCheck");
+            x.checked = true;
+            
+        }
+       </script>
+       
+    </body>
+</html>
