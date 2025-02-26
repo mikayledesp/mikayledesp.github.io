@@ -1,52 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            #myContainer {
-            width: 400px;
-            height: 400px;
-            position: relative;
-            background: yellow;
-            }
-            #redSq {
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            background-color: red;
-            }
-
-            #blueSq {
-            width: 50px;
-            height: 50px;
-            top: 350px;
-            left: 350px;
-            position: absolute;
-            background-color: blue;
-            }
-
-        </style>
+        <title>Homework 4</title>
     </head>
     <body>
-        <label for="redSpeed">Red square speed</label>
+        <label for="redLabel">Red Square Speed:</label>
         <select id="redSpeed">
-            <option value=30>Slow</option>
-            <option value=20>Medium</option>
-            <option value=10>Fast</option>
+            <option value="30">Slow</option>
+            <option value="15">Medium</option>
+            <option value="10">Fast</option>
         </select>
-        <button id="moveRedBtn" onclick="moveRed()" >Move red square</button> <br><br> 
+        <button id="moveRedBtn" onclick="moveRed()">Move Red Square</button>  
+        <br><br> 
 
-        <label for="blueSpeed">Blue Square speed</label>
+        <label for="blueLabel">Blue Square Speed:</label>
         <select id="blueSpeed">
-            <option value=30>Slow</option>
-            <option value=20>Medium</option>
-            <option value=10>Fast</option> 
+            <option value="30">Slow</option>
+            <option value="15">Medium</option>
+            <option value="10">Fast</option> 
         </select>
-        <button id="moveBlueBtn" onclick="moveBlue()">Move blue square</button> <br><br>
-        <div id ="myContainer">
-            <div id ="blueSq"></div>
-            <div id ="redSq"></div>
+        <button id="moveBlueBtn" onclick="moveBlue()">Move Blue Square</button>  
+        <br><br>
+
+        <div id="myContainer">
+            <div id="blueSq"></div>
+            <div id="redSq"></div>
         </div>
 
-    <script src="js/animation.js"></script>
+        <script src="js/animation.js"></script>
     </body>
 </html>

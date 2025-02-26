@@ -1,15 +1,14 @@
-   
-function moveRed()
-{   
+function moveRed() {   
     var redSquare = document.getElementById("redSq");   
     var redPos = 0;
-    // setInterval calls a function at specified intervals
-    var stepRedId = setInterval(stepRed, 10);
+    var speed = parseInt(document.getElementById("redSpeed").value); // Get user-selected speed
+
+    clearInterval(redInterval); // Clear any existing red square animation
+   var redInterval = setInterval(stepRed, speed); // Apply selected speed
 
     function stepRed() {
-        if (redPos == 350) {
-            // clear interval is when it stops 
-            clearInterval(stepRedId);
+        if (redPos >= 350) {
+            clearInterval(redInterval); // Stop when reaching the limit
         } else {
             redPos++; 
             redSquare.style.top = redPos + 'px'; 
@@ -18,23 +17,21 @@ function moveRed()
     }
 }
 
-function moveBlue(){
-    
+function moveBlue() {  
     var blueSquare = document.getElementById("blueSq");
     var bluePos = 350;
-    // using the setInterval to increase or decrease speed based on users option choice 
-    var stepBlueId = setInterval(stepBlue, 10);
+    var speed = parseInt(document.getElementById("blueSpeed").value); // Get user-selected speed
 
-    function stepBlue(){
-        if (bluePos == 0){
-            clearInterval(stepBlueId);   
-        } else{
-            // decreasing to head back towards the left side 
+    clearInterval(blueInterval); // Clear any existing blue square animation
+    var blueInterval = setInterval(stepBlue, speed); // Apply selected speed
+
+    function stepBlue() {
+        if (bluePos <= 0) {
+            clearInterval(blueInterval); // Stop when reaching the limit  
+        } else {
             bluePos--;
-            // coordinates of the square
             blueSquare.style.top = bluePos + 'px';
             blueSquare.style.left = bluePos + 'px';
         }
     }
 }
-
