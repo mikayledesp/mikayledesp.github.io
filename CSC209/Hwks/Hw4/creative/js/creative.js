@@ -77,3 +77,16 @@ function moveAll(){
     moveRed();
     movePurple();
 }
+
+function toggleTheme() {
+    let theme = document.getElementById('theme');
+    console.log("Current theme href:", theme.getAttribute('href'));
+  
+    if (theme.getAttribute('href') === 'css/creative.css') {
+      theme.setAttribute('href', 'css/creativeDark.css');
+    } else {
+      theme.setAttribute('href', 'css/creative.css');
+    }
+  
+    console.log("New theme href:", theme.getAttribute('href'));
+  }
