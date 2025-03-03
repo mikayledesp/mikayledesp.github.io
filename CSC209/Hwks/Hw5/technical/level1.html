@@ -1,24 +1,61 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>Level 1</title>
-<linke id="theme" rel="stylesheet" href="css/level1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Vector Visualization</title>
 </head>
 <body>
-<h1>Level 1</h1>
-<canvas id="myCanvas" width="500" height="500" style="border:1px solid rgb(245, 0, 187)"></canvas>
+    <canvas id="canvas" width="400" height="400"></canvas>
+
+    <script>
+            const ctx = canvas.getContext("2d");
+
+            // Initial position of the point
+            let point = { x: 300, y: 300 };
+
+            // Velocity vector x = direction, y = speed
+            let velocity = { x: 60, y: 30 }; 
+
+        
 
 
+            // multiplying in order to make vecror line shorter eithout changing direction
+            let velocityx = velocity.x * 0.3;
+            let velocityy = velocity.y * 0.3;
 
+            // Function to draw a hollow point (circle outline)
+            function drawCircle(x, y) {
+                ctx.beginPath();
+                ctx.arc(x, y, 10, 0, Math.PI * 2);
+                ctx.strokeStyle = "blue"; // Outline color
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
 
+            // Function to draw the vector (as a short line with an arrow)
+            function drawVector(x, y, velocityx, velocityy) {
+                let endX = x + velocityx;
+                let endY = y + velocityy;
 
+                // Draw main vector line
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(endX, endY);
+                ctx.strokeStyle = "blue";
+                ctx.lineWidth = 2;
+                ctx.stroke();
 
+            
+            }
 
+            // Clear canvas and redraw scene
+            function drawScene() {
+                drawCircle(point.x, point.y);
+                drawVector(point.x, point.y, velocityx, velocityy);
+            }
 
-
-
-
-<script src="js/level1.js"></script>
+            drawScene();
+    </script>
 </body>
 </html>
