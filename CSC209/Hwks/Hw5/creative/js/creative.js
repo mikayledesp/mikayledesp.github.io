@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 const numPointsInput = document.getElementById("numPoints");
 const traceToggle = document.getElementById("traceToggle");
 
-// List to store stars
+// list to store stars
 let pointsList = [];
 
 
@@ -30,23 +30,22 @@ function generateRandomPoints() {
     draw();
 }
 
-// Returns a random star color (yellow or white)
+// random color between yellow and white
 function getRandomColor() {
     return Math.random() < 0.5 ? "yellow" : "white";
 }
 
-// Draws the shooting stars using the emoticon "⋆｡°✩"
+// draws emoticon stars 
 function draw() {
     if (!traceToggle.checked) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
     
-    ctx.font = "30px Arial";  // Adjust size if needed
+    ctx.font = "35px Arial";  
     ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
 
     pointsList.forEach(point => {
-        ctx.fillStyle = point.color; // Set color for each star
+        ctx.fillStyle = point.color; 
         ctx.fillText("★", point.x, point.y);
     });
 }
@@ -56,9 +55,10 @@ function animateMotion() {
     let step = 0;
     const interval = setInterval(() => {
         pointsList.forEach(point => {
+            //pushes the point in direction of velocity vector
             point.x += point.velocity.x;
             point.y += point.velocity.y;
-            // Reset position if off-screen
+            // handles edgecases of off screen stars 
             if (point.x > canvas.width || point.y > canvas.height) {
                 point.x = Math.random() * canvas.width;
                 point.y = 0;
@@ -72,9 +72,10 @@ function animateMotion() {
     });
 }
 
-// Resets the stars to their initial positions
+// resets animation
 function resetAnimation() {
     pointsList.forEach(point => {
+        // resets the points to the initial y and x coordinates
         point.x = point.initialX;
         point.y = point.initialY;
     });
