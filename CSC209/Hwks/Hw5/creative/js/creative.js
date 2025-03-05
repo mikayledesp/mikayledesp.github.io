@@ -14,7 +14,7 @@ function generateRandomPoints() {
     for (let i = 0; i < n; i++) {
         const x = Math.random() * canvas.width;
         // starts at y so it starts towards the top
-        const y = 5; 
+        const y = 0; 
         pointsList.push({
             x: x,
             y: y,
@@ -74,11 +74,11 @@ function animateMotion() {
             point.x += point.velocity.x;
             point.y += point.velocity.y;
             // handles edgecases of off screen stars 
-            if (point.x > canvas.width || point.y > canvas.height) {
-                point.x = Math.random() * canvas.width;
-                point.y = 0;
-                point.trail =[];
-            }
+            // if (point.x > canvas.width || point.y > canvas.height) {
+            //     point.x = Math.random() * canvas.width;
+            //     point.y = 0;
+            //     point.trail =[];
+            // }
         });
         draw();
         step++;
