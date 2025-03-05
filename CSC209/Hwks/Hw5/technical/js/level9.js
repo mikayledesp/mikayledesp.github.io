@@ -2,17 +2,18 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const numPointsInput = document.getElementById("numPoints");
 
-let points = [];
+// changed list name to pointsList for clarity since I kept getting confused 
+let pointsList = [];
 
 function generateRandomPoints() {
     const n = parseInt(numPointsInput.value);
-    points = [];
+    pointsList = [];
     
     for (let i = 0; i < n; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         // 
-        points.push({
+        pointsList.push({
             x: x,
             y: y,
             initalX: x,
@@ -24,8 +25,9 @@ function generateRandomPoints() {
     draw();
 }
 
+
 function velocity(){
-     // makes range for velocity from 4 to 4 to make  random velocities  
+     // makes range for velocity from 4 to 4 to make random velocities  
     return (Math.random() - 0.5) * 8;
 }
 
@@ -54,20 +56,26 @@ function drawVector(x, y, vx, vy, color) {
     ctx.lineWidth = 2;
     ctx.stroke();
 }
-// function to draw both circles and vectors 
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    points.forEach(point => {
-        drawVector(point.x, point.y, point.velocity.x, point.velocity.y, point.color);
-        drawCircle(point.x, point.y, point.color);
+
+ // function to draw both circles and vectors 
+ function draw() {
+    // toggle that if not checked will show as regular 
+    const traceToggle = document.getElementById("traceToggle");
+    if (!traceToggle.checked) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    pointsList.forEach(point => {
+      drawVector(point.x, point.y, point.velocity.x, point.velocity.y, point.color);
+      drawCircle(point.x, point.y, point.color);
     });
-}
+  }
 
 function animateMotion() {
     let step = 0;
 
     const interval = setInterval(() => {
-        points.forEach(point => {
+        pointsList.forEach(point => {
             //pushes the point in direction of velocity vector
             point.x += point.velocity.x;
             point.y += point.velocity.y;
@@ -81,8 +89,10 @@ function animateMotion() {
 }
 
 function resetAnimation() {
-    points.forEach(point => {
-        // resets the points to the initial y and x coordinates
+    pointsList.forEach(point => {
+        // makes sure to clear rectangle even w toggle on
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+       // resets the points to the initial y and x coordinates
         point.x = point.initalX;
         point.y = point.initalY;
     });

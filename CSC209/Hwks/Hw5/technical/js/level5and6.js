@@ -12,10 +12,15 @@
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 color: getRandomColor(),
-                velocity: { x: (Math.random() - 0.5) * 6, y: (Math.random() - 0.5) * 6 }
+                velocity: { x: velocity(), y: velocity()}
             });
         }
         draw();
+    }
+
+    function velocity(){
+        // makes range for velocity from 4 to 4 to make  random velocities  
+        return (Math.random() - 0.5) * 8;
     }
 
     // function to generate colors

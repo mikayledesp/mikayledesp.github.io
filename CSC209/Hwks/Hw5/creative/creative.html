@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/creative.css">
+    <title>Level 9 </title>
+</head>
+<body>
+    <h1>Star Shooting simulator</h1>
+    <label for="numPoints">Number of Points:</label>
+    <input id="numPoints" type="number" min="1" value="5">
+    <button id="generatePoints" onclick="generateRandomPoints()">Generate Points</button>
+    <button id="startAnimation" onclick="animateMotion()">Start Animation</button>
+    <button id="resetAnimation" onclick="resetAnimation()">Reset Animation</button>
+    <script>
+        //number of animation steps
+        const NRSTEPS = 100; 
+    </script>
+    <br>
+    <label for="traceToggle">Show Trace</label>
+    <input id="traceToggle" type="checkbox">
+    <br>
+    <canvas id="canvas" width="500" height="500" style="border:3px solid grey"></canvas>
+
+    <script src="js/creative.js"></script>
+</body>
+</html>
