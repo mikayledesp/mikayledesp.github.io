@@ -74,11 +74,11 @@ function animateMotion() {
             point.x += point.velocity.x;
             point.y += point.velocity.y;
             // handles edgecases of off screen stars 
-            // if (point.x > canvas.width || point.y > canvas.height) {
-            //     point.x = Math.random() * canvas.width;
-            //     point.y = 0;
-            //     point.trail =[];
-            // }
+            if (point.x > canvas.width || point.y > canvas.height) {
+                point.x = Math.random() * canvas.width;
+                point.y = 0;
+                point.trail =[];
+            }
         });
         draw();
         step++;

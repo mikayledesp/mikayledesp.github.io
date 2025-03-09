@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/technical.css">
+    <title>technical</title>
+</head>
+<body>
+<h1>Game of Life</h1>
+<p>Mikayle Despaigne</p>
+<div class="allBtns">
+<button class="btn" id="nextGenBtn">Next Generation</button>
+<button class="btn" id="resetButton">Reset</button>
+<!-- preset select -->
+<select id="patternSelect">
+  <option selected disabled>Choose an Initializing Preset</option>
+  <option value="empty">Empty</option>
+  <option value="random">Random</option>
+</select>
+
+<select id="gridSizeSelect">
+  <option value="small">Small</option> 
+  <option value="med">Medium</option> 
+  <option value="Lg">Large</option> 
+</select>
+
+</div>
+<!-- holds game -->
+<div class="grid-container">
+
+  <table id="grid"></table>
+</div>
+<script src="js/technical.js"></script>
+</body>
+</html>
