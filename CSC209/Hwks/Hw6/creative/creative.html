@@ -2,25 +2,30 @@
 <html>
 <head>
   <link rel="stylesheet" href="css/creative.css">
-    <title>Creative</title>
+    <title>creative</title>
 </head>
 <body>
 <h1>Game of Life</h1>
-<p>Mikayle Despaigne</p>
+<center><img src="https://miro.medium.com/v2/1*lI0IaLqlpXjh96Z-_RX9Dw.gif" width="200" height="200"></center>
+<br>
 <div class="allBtns">
 <button class="btn" id="nextGenBtn">Next Generation</button>
 <button class="btn" id="resetButton">Reset</button>
+<br>
+<br>
 <!-- preset select -->
-<select id="patternSelect">
+<select class="select"id="presetSelect">
   <option selected disabled>Choose an Initializing Preset</option>
   <option value="empty">Empty</option>
   <option value="random">Random</option>
+  <option value="allSqs"> All Squares</option>
+  <option value="glider"> Glider</option>
 </select>
 
-<select id="gridSizeSelect">
-  <option value="small">Small</option> 
-  <option value="med">Medium</option> 
+<select class="select" id="gridSizeSelect">
   <option value="Lg">Large</option> 
+  <option value="med">Medium</option> 
+  <option value="small">Small</option> 
 </select>
 
 </div>

@@ -1,7 +1,7 @@
-// waits until DOM is fully loaded to start
-// note : for some reason the code wouldmt work until i refresed so I added the event listener
+// note : for some reason the code wouldmt work until i refresed so I added the event listener that waits until DOM is fully loaded to start
 document.addEventListener("DOMContentLoaded", () => {
-    let rows = 10;  // Default grid size
+
+    let rows = 10;  
     let cols = 10;
     let grid = [];
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Function to create and render the table
+    // function to create and render the table
     function drawGrid() {
         let table = document.getElementById("grid");
         table.innerHTML = ""; // Clear previous grid
@@ -26,9 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
             let rowElement = document.createElement("tr");
             for (let j = 0; j < cols; j++) {
                 let cellElement = document.createElement("td");
+                // used this article to learn about dataset: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
                 cellElement.dataset.row = i;
                 cellElement.dataset.col = j;
-                cellElement.classList.add("dead"); // Default state
+                cellElement.classList.add("dead"); 
 
                 // on click the cell comes alive
                 cellElement.addEventListener("click", () => {
@@ -36,14 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
                     cellElement.classList.toggle("alive", grid[i][j].alive);
                 });
 
-                rowElement.appendChild(cellElement);
+                rowElement.append(cellElement);
             }
-            table.appendChild(rowElement);
+            table.append(rowElement);
         }
     }
 
-    // Function to update the table grid
-    function updateHTMLGrid() {
+    // updates grid
+    function updateGrid() {
         let tableCells = document.querySelectorAll("#grid td");
         tableCells.forEach((cell) => {
             let i = cell.dataset.row;
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         grid = newGrid;
-        updateHTMLGrid();
+        updateGrid();
     }
 
     // function to count alive neighbors
@@ -79,7 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (i === 0 && j === 0) continue;
                 let neighbori = row + i;
                 let neighborj = col + j;
-                if (neighbori >= 0 && neighbori < rows && neighborj >= 0 && neighborj < cols && grid[neighbori][neighborj].alive) {
+                if (neighbori >= 0 &&
+                     neighbori < rows &&
+                      neighborj >= 0 &&
+                       neighborj < cols &&
+                        grid[neighbori][neighborj].alive) {
                     num++;
                 }
             }
@@ -89,22 +94,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // function to reset the grid
     function resetGrid() {
-        initializeGrid();
-        drawGrid();
+        initializeGrid(); 
+        drawGrid();       
+        document.getElementById("presetSelect").value = "empty"; 
+
     }
 
-    // function to apply pattern (random or empty)
-    function applyPattern(pattern) {
-        initializeGrid();
-        if (pattern === "random") {
-            for (let i = 0; i < rows; i++) {
-                for (let j = 0; j < cols; j++) {
-                    grid[i][j].alive = Math.random() < 0.3;
-                }
+    // applies presets 
+    function applyPreset(preset) {
+    initializeGrid(); // Reset the grid
+
+    if (preset === "random") {
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                // randomly makes the cells alive via loop 
+                grid[i][j].alive = Math.random() < 0.3;
             }
         }
-        updateHTMLGrid();
+    } else if (preset === "allSqs") {
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                // makes all the cells alive via loop 
+                grid[i][j].alive = true; // Ensure all cells are filled
+            }
+        }
     }
+
+    updateGrid(); // Refresh the grid display
+}
+
 
     // function to change grid size
     function changeGridSize(size) {
@@ -117,19 +135,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         resetGrid();
     }
-
+    //functions to handle tying the  dropdowns to the event listeners 
+    function handlePresetChange(event) {
+        applyPreset(event.target.value);
+    }
+    
+    function handleGridSizeChange(event) {
+        changeGridSize(event.target.value);
+    }
     // event listeners
     document.getElementById("nextGenBtn").addEventListener("click", nextGeneration);
     document.getElementById("resetButton").addEventListener("click", resetGrid);
-    document.getElementById("patternSelect").addEventListener("change", (event) => {
-        applyPattern(event.target.value);
-    });
-
-    document.getElementById("gridSizeSelect").addEventListener("change", (event) => {
-        changeGridSize(event.target.value);
-    });
+    document.getElementById("presetSelect").addEventListener("change", handlePresetChange);
+    document.getElementById("gridSizeSelect").addEventListener("change", handleGridSizeChange);
 
 
     initializeGrid();
     drawGrid();
 });
+// to do check when all the squares are covered, glider, still lifes 
+

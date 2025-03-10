@@ -20,8 +20,8 @@ table {
 td {
     width: 20px;
     height: 20px;
-    border: 1px solid #ccc;
-    background-color: white;
+    border: 1px solid #ff0000;
+    background-color: rgb(255, 255, 255);
     transition: background 0.2s;
 }
 

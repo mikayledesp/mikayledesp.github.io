@@ -1,8 +1,8 @@
 // waits until DOM is fully loaded to start
 // note : for some reason the code wouldmt work until i refresed so I added the event listener
 document.addEventListener("DOMContentLoaded", () => {
-    let rows = 10;  // Default grid size
-    let cols = 10;
+    let rows = 30;  // Default grid size
+    let cols = 30;
     let grid = [];
 
     // initilizes the grid 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 let cellElement = document.createElement("td");
                 cellElement.dataset.row = i;
                 cellElement.dataset.col = j;
-                cellElement.classList.add("dead"); // Default state
+                cellElement.classList.add("dead");
 
                 // on click the cell comes alive
                 cellElement.addEventListener("click", () => {
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Function to update the table grid
-    function updateHTMLGrid() {
+    // updates grid
+    function updateGrid() {
         let tableCells = document.querySelectorAll("#grid td");
         tableCells.forEach((cell) => {
             let i = cell.dataset.row;
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         grid = newGrid;
-        updateHTMLGrid();
+        updateGrid();
     }
 
     // function to count alive neighbors
@@ -79,7 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (i === 0 && j === 0) continue;
                 let neighbori = row + i;
                 let neighborj = col + j;
-                if (neighbori >= 0 && neighbori < rows && neighborj >= 0 && neighborj < cols && grid[neighbori][neighborj].alive) {
+                if (neighbori >= 0 && 
+                    neighbori < rows && 
+                    neighborj >= 0 && 
+                    neighborj < cols && 
+                    grid[neighbori][neighborj].alive) {
+
                     num++;
                 }
             }
@@ -93,17 +98,27 @@ document.addEventListener("DOMContentLoaded", () => {
         drawGrid();
     }
 
-    // function to apply pattern (random or empty)
-    function applyPattern(pattern) {
+    // function to apply preset(random or empty)
+    function applyPreset(preset) {
         initializeGrid();
-        if (pattern === "random") {
+        if (preset === "random") {
             for (let i = 0; i < rows; i++) {
                 for (let j = 0; j < cols; j++) {
                     grid[i][j].alive = Math.random() < 0.3;
                 }
             }
         }
-        updateHTMLGrid();
+        
+        if (preset === "allSqs"){
+            for(let i = 0; i <rows; i++){
+                for(let j = 0; j < cols; j++){
+                    grid[i][j].alive = true;
+                }
+            }
+        }
+
+        if(prest === "glider")
+        updateGrid();
     }
 
     // function to change grid size
@@ -121,8 +136,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // event listeners
     document.getElementById("nextGenBtn").addEventListener("click", nextGeneration);
     document.getElementById("resetButton").addEventListener("click", resetGrid);
-    document.getElementById("patternSelect").addEventListener("change", (event) => {
-        applyPattern(event.target.value);
+    document.getElementById("presetSelect").addEventListener("change", (event) => {
+        applyPreset(event.target.value);
     });
 
     document.getElementById("gridSizeSelect").addEventListener("change", (event) => {
@@ -133,3 +148,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeGrid();
     drawGrid();
 });
+
+
