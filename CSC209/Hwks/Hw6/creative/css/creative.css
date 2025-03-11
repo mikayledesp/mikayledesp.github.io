@@ -1,76 +1,118 @@
-body{
-    /* Image from usplash  */
-    background-image: url("https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+body {
+  /* Image from usplash  */
+  background-image: url("https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
-h1,p{
-   text-align: center;
-   color:white;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+h1,
+p {
+  text-align: center;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
 }
 
-.allBtns{
+/* .allBtns{
     /* display: flex;
     justify-content: center; */
-    text-align: center;
+/* text-align: center;
     justify-content: center;
-}
+} */
 
 .grid-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 td {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ffffff;
-    background-color: #EA4C89;
-    transition: background 0.2s;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  background-color: #ea4c89;
+  transition: background 0.2s;
 }
 
 td.alive {
-    background-color: rgb(255, 207, 102);
+  background-color: rgb(255, 207, 102);
 }
 
-#btn{
-    padding-left: 120px;
-    padding-right: 120px;
+#btn {
+  padding-left: 120px;
+  padding-right: 120px;
 }
 
 .btn {
-    background-color: purple;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border: none;
-    cursor: pointer;
+  background-color: purple;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
-
 
 .btn:hover {
-    background-color: plum;
+  background-color: plum;
 }
-
 
 .btn:active {
-    background-color: darkviolet;
+  background-color: darkviolet;
 }
 
-
 .select {
-    background-color: purple;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: purple;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+aside {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+}
+article {
+  flex: 3;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.allBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+article {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
