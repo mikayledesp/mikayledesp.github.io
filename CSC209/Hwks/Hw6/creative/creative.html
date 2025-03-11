@@ -11,15 +11,16 @@
 <div class="allBtns">
 <button class="btn" id="nextGenBtn">Next Generation</button>
 <button class="btn" id="resetButton">Reset</button>
-<br>
-<br>
-<!-- preset select -->
+
+<section>
+<!-- preset select and grid select to the left of page-->
 <select class="select"id="presetSelect">
   <option selected disabled>Choose an Initializing Preset</option>
   <option value="empty">Empty</option>
   <option value="random">Random</option>
-  <option value="allSqs"> All Squares</option>
   <option value="glider"> Glider</option>
+  <option value="allSqs"> All Squares</option>
+  
 </select>
 
 <select class="select" id="gridSizeSelect">
@@ -29,11 +30,15 @@
 </select>
 
 </div>
+</section>
+<!-- game container to right of page  -->
+<aside>
 <!-- holds game -->
 <div class="grid-container">
 
   <table id="grid"></table>
 </div>
+</aside>
 <script src="js/creative.js"></script>
 </body>
 </html>
