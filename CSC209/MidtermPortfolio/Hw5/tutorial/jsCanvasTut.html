@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid grey"></canvas>
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+
+// var x = getRandomx(400);
+// var y = getRandomy(400);
+var x = 10 + getRandomx(400);
+var y = 10 + getRandomy(400);
+
+let velocityx = x + 10;
+function drawCircle(){
+    ctx.beginPath();
+    // x coordinate, y coordinate, radius, 
+    ctx.arc(x, y, 15, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.closePath();
+}
+function drawArrow(){
+    ctx.beginPath();
+    ctx.moveTo(x + velocityx,y + 20);
+    ctx.lineTo(x, y);
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    ctx.closePath();
+}
+
+
+function drawDisk(){
+
+    drawArrow();
+    drawCircle();
+    
+}
+
+function getRandomx(max){
+    return Math.floor(Math.random() * max);
+}
+function getRandomy(max){
+    return Math.floor(Math.random() * max);
+}
+
+// add for loop that takes in 
+
+
+</script>
+<button onclick="drawDisk()"> Add Disk</button>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+#myContainer {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    background: rgb(25, 25, 25);
+}
+#redSq {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    background-color: red;
+    border-radius: 100%;
+}
+#blueSq {
+    width: 75px;
+    height: 75px;
+    top: 350px;
+    left: 350px;
+    position: absolute;
+    background-color: blue;
+    border-radius: 100%;
+}
+
+#purpleSq{
+    width: 75px;
+    height: 75px;
+    top: 150px;
+    left: 150px;
+    position: absolute;
+    background-color: rgb(128, 0, 128);
+    border-radius: 100%;
+}
+#pinkSq{
+    width: 75px;
+    height: 75px;
+    top: 5px;
+    left: 0px;
+    position: absolute;
+    background-color: rgb(255, 192, 203);
+    border-radius: 100%;
+}
+

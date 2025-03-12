@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slide show Tutorial  </title>
+</head>
+<body>
+<h1>Objects Tutorial</h1>
+<h2>Creating an Object</h2>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+// Create an Object:
+const car = {type:"Fiat", model:"500", color:"white"};
+const car2 = {type:"Ferrari", model:"227", color:"blue"};
+// Display Data from the Object:
+document.getElementById("demo").innerHTML =
+"The car type is " + car.type + ". The car model is " + car.model;
+document.getElementById('demo2').innerHTML =
+"The car type is " +car2.type + ". The car color is " + car2.color ;
+</script>
+<h1>Events Tutorial</h1>
+<p>Structre of events is as follows : < element event="some JavaScript" > </p>
+<p>Example: </p>
+<button onclick="document.getElementById('demo3').innerHTML=Date()">The time is?</button>
+
+<p id="demo3"></p>
+</body>
+</html>

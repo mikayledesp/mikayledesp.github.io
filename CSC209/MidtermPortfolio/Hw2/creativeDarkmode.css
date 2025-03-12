@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #661c32;
+    color: #eab5c5;
+  }
+  
+  /* Style the header */
+  header {
+    /* padding: 10px; */
+    text-align: center;
+    font-size: 32px;
+    color: #eab5c5;
+  }
+
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: right;
+    padding: 20px;
+    width: 70%;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  table, th, td {
+    border:3px solid white;
+
+  }
+  
+  #aboveText{
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  a {
+    color: #eab5c5;
+  }
+  li{
+    padding: 10px;
+  }
+ 
+/* Rounded border */
+hr.rounded {
+  border-top: 2px solid #eab5c5;
+  border-radius: 5px;
+}
+ 

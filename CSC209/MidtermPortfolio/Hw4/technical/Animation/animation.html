@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 4</title>
+        <link id="theme" rel="stylesheet" href="css/animation.css">
+    </head>
+    <body>
+        <label for="redLabel">Red Square Speed:</label>
+        <select id="redSpeed">
+            <option value="30">Slow</option>
+            <option value="15">Medium</option>
+            <option value="10">Fast</option>
+        </select> 
+        <br><br> 
+
+        <label for="blueLabel">Blue Square Speed:</label>
+        <select id="blueSpeed">
+            <option value="30">Slow</option>
+            <option value="15">Medium</option>
+            <option value="10">Fast</option> 
+        </select> 
+        <br><br>
+        <label for="purpleLabel">Purple Square Speed:</label>
+        <select id="purpleSpeed">
+            <option value="30">Slow</option>
+            <option value="15">Medium</option>
+            <option value="10">Fast</option> 
+        </select> <br><br>
+        <label for="pinkLabel">Pink Square Speed:</label>
+        <select id="pinkSpeed">
+            <option value="30">Slow</option>
+            <option value="15">Medium</option>
+            <option value="10">Fast</option> 
+        </select> <br><br>
+    <button id="moveBlueBtn" onclick="moveAll()">Move All Squares</button> 
+    <br><br>
+        <div id="myContainer">
+            <div id="blueSq"></div>
+            <div id="redSq"></div>
+            <div id="purpleSq"></div>
+            <div id="pinkSq"></div>
+        </div>
+
+        <script src="js/animation.js"></script>
+    </body>
+</html>

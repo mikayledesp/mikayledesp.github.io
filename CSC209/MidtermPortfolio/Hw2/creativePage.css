@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eab5c5;
+    color: #661c32;
+  }
+  
+  header {
+    /* padding: 10px; */
+    text-align: center;
+    font-size: 32px;
+    color: #661c32;
+  }
+
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: right;
+    padding: 20px;
+    width: 70%;
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  table, th, td {
+    border:3px solid white;
+
+  }
+  
+  #aboveText{
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  a {
+    color: #661c32;
+  }
+  th{
+    color: #eab5c5;
+  }
+  li{
+    padding: 10px;
+  }
+  /* Rounded border */
+  hr.rounded {
+    border-top: 2px solid #661c32;
+    border-radius: 5px;
+  }
+   
+ 

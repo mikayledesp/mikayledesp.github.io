@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>In HTML, JavaScript statements are executed by the browser.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+
+<p> Below is an example of the math statements that can be done in JS</p>
+<p id="demo1"></p>
+
+<script>
+let a, b, c;
+a = 5;
+b = 6;
+c = a + b;
+document.getElementById("demo1").innerHTML = c;
+</script>
+<p>Example shows how blocks of Javascript function within HTML</p>
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo2").innerHTML = "Hello Dolly!";
+  document.getElementById("demo3").innerHTML = "How are you?";
+}
+</script>
+ <!-- comment practice  -->
+<!-- Future notes:
+ var = declaring variable
+ let = declares a block var
+ const = a block constant
+ if = marks start of a to be executed condition
+ switch = block of statements to be executed in different cases
+ for = statements to be executed in a loop
+-->
+</body>
+</html>

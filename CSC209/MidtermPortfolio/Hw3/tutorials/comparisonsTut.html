@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Comparison</h1>
+<h2>Using age and input comparisons </h2>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+</script>
+<h3>How to portray missing input</h3>
+<p id="demo2"></p>
+
+<script>
+let name = null;
+let text = "missing";
+let result = name ?? text;
+document.getElementById("demo2").innerHTML = "The name is " + result; 
+</script>
+</body>
+</html>

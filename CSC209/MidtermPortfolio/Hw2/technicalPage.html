@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> HTML Layout Tutorial</title>
+<link id="theme" rel="stylesheet" 
+type="text/css" href="technicalPage.css" />
+<style>
+  hr.rounded {
+    border-top: 2px solid #000000;
+    border-radius: 5px;
+  }
+
+</style>
+</head>
+<body>
+<header>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAk44LpGjs9OKgmcZf4l7TOD23ibFkxatRKTDhLSYeo8UGy9ANNFWEEBig33cci5aEow&usqp=CAU">
+  <h2>CSC 209 Web Programming </h2>
+  <h4>Schedule</h4>
+  <script>
+    function displayText() {
+  var text = document.getElementById("textField");
+  text.style.display = "block";
+}
+</script>
+<button onclick="displayText()">Read Course Description</button>
+
+<div id="textField" style="display: none; font-size: small;">
+  <p>	
+    This course covers the fundamentals of programming for the web. Students explore client-side development using HTML, CSS, JavaScript and jQuery to craft interactive and visually appealing web experiences. Next, the course transitions to server-side programming, using PHP and AJAX to build robust and responsive web applications. The course also covers foundational topics in software design and project development through both hands-on projects and guided instruction. Prerequisite: CSC 120 or CSC 210. Enrollment limited to 30.</p>
+</div>
+<p id="aboveText"> Change to Dark Mode </p>
+<button onclick="toggleTheme()">Switch</button>
+    <script>
+        function toggleTheme() {
+
+            let theme = document.getElementById('theme');
+          // if statement that changes theme from light to dark css style sheet  
+            if (theme.getAttribute('href') == 'technicalPage.css') {
+                theme.setAttribute('href', 'technicalDarkmode.css');
+            } else {
+                theme.setAttribute('href', 'technicalPage.css');
+            }
+        }
+    </script>
+</header>
+
+<section>
+  <h3>Time Taken: </h3>
+  <p id="aboveText">Technical Took approx 2.5 Hours</p>
+  <nav>
+    <ul>
+      <li><a href="https://moodle.smith.edu/mod/assign/view.php?id=1267628"><h2>CSC 209</h2></a></li>
+      <li><h2>Spring 2025</h2></li>
+      <li>Ileana Streinu</li>
+      <hr class="rounded">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Schedule</a></li>
+      <li><a href="#">Syllabus</a></li>
+      <hr class="rounded">
+      <li><a href="#">HowTo</a></li>
+      <li><a href="#">Resources</a></li>
+    </ul>
+  </nav>
+  
+   <article> 
+    <table style="width:100%;">
+      <tr style="background-color: rgb(176, 160, 7);">
+        <th>Week</th>
+        <th>Date</th>
+        <th>Lecture</th>
+        <th>Topic</th>
+        <th>HWK</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tu 9/1</td>
+        <td>Lectures 1 + 2</td>
+        <td>Intoduction. Case Study : some basic linear time algorithms.</td>
+        <td style="text-align: center;"> - </td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Thur 9/8</td>
+        <td>Lecture 3</td>
+        <td>Algorithm Analysis : Asymptomatic analysis : Big Oh and orders of growth. Worst case, best Case analysis.</td>
+        <td>EX 1 
+          <br>
+          Hw 1
+        </td>
+      </tr>
+    </table>
+    </article> 
+</section>
+
+</body>
+</html>
+

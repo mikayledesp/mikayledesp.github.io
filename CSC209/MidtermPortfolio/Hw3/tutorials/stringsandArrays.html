@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slide show Tutorial  </title>
+</head>
+<body>
+<h1>Strings Tutorial</h1>
+<h2>Basic Strings</h2>
+<p id="demo"></p>
+<script>
+let text2 = "We are the so-called \"Vikings\" from the north.";
+document.getElementById("demo").innerHTML = text2;
+</script>
+
+
+<p id="demo1"></p>
+<script>
+    let text = `He's often called "Johnny"`;
+    document.getElementById("demo1").innerHTML = text;
+    </script>
+
+<h2>Arrays</h2>
+<p>Below prints an array: </p>
+<p id="demo2"></p>
+<script>
+    const cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("demo2").innerHTML = cars;
+</script>
+
+<h3> Changing an array element: </h3>
+<p id="demo3"></p>
+<script>
+    const cars2 = ["JayJay", "Mika", "HayHay"];
+    cars2[0] = "Opel";
+    document.getElementById("demo3").innerHTML = cars2;
+    </script>
+</body>
+</html>
