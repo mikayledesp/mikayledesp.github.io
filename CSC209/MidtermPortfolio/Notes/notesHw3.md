@@ -4,8 +4,11 @@ Here, to do everything sucessfully I had to do the following steps:
 
 used the layout from w3 schools to style in CSS and used JS to iteratively create slides based on  
 ## Main Ideas  to replicate JS
+
 1) Set up HTML structure to have a container to hold slides and nav dots
+
 2) Define the locan variable ur iterating over 
+
 ex: var NUM_IMAGES = 5, var imageNames [list of image names]
 
 3. Identify the Target Container
