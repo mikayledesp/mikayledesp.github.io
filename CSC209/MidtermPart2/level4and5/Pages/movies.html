@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="../css/movies.css" />
+  </head>
+  <body>
+    <h1>Game of Life</h1>
+    <p>
+      The Game of Life, also known as Conway's Game of Life or simply Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.(Summary From Wikipedia) </p>
+    <section>
+      <!-- buttons on the left -->
+      <aside>
+        <div class="allBtns">
+          <button class="btn" id="nextGenBtn">Next Generation</button>
+          <button class="btn" id="resetButton">Reset</button>
+        </div>
+
+        <div class="selectors">
+          <select class="select" id="presetSelect">
+            <option selected disabled>Choose an Initializing Preset</option>
+            <option value="empty">Empty</option>
+            <option value="random">Random</option>
+            <option value="glider">Glider</option>
+            <option value="allSqs">All Squares</option>
+          </select>
+
+          <select class="select" id="gridSizeSelect">
+            <option value="Lg">Large</option>
+            <option value="med">Medium</option>
+            <option value="small">Small</option>
+          </select>
+        </div>
+      </aside>
+      <!-- grid on the right -->
+      <article>
+        <div class="grid-container">
+          <table id="grid"></table>
+        </div>
+      </article>
+    </section>
+
+    <script src="../js/movies.js"></script>
+  </body>
+</html>

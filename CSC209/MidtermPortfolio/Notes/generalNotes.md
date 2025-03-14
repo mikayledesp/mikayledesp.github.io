@@ -46,4 +46,4 @@ Ex : output += arr1[i] + arr2[j];
 
 Then finally print in dom by doing 
 
-Document.getElementByID("output_Div".interHTML = outputHTML;
+Document.getElementByID("output_Div").interHTML = outputHTML;
