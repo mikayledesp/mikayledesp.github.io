@@ -11,6 +11,7 @@ $headers = array("First Name", "Last Name", "Age");
 // generating rows using midterm for inspiration 
 function addRows() {
     global $NROWS, $firstNames, $lastNames, $ages;
+    // $fNames = $firstNames[$i];
     for ($i = 0; $i < $NROWS; $i++) { 
         addSingleRow($firstNames[$i], $lastNames[$i], $ages[$i]);
     }
@@ -31,7 +32,7 @@ function addCols() {
     echo "</tr>"; 
 }
 
-// Print a single column header
+
 function addHeaderCols($tHead) {
     echo '<th style="width:75%;">' . $tHead . '</th>';  
 }
