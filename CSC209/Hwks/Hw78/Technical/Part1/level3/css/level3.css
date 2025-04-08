@@ -1,0 +1,12 @@
+.gallery img {
+    width: 400px;
+    margin: 10px;
+}
+.gallery {
+display: flex;
+flex-direction: row
+}
+.dropdown {
+ text-align:center;
+ padding: 10px;
+}
