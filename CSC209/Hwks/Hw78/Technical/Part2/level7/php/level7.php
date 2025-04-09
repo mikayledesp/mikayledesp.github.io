@@ -3,18 +3,19 @@
 // Directory where image folders are located
 $imgDir = 'images/';
 
-// Fetch all folder names (directories within the 'images' folder)
+// getting folder names 
 $folders = array_filter(glob($imgDir . '*'), 'is_dir');
 
-// Get the selected folder from the URL, or default to the first folder
+// Getting the selected folder from button in html
 $selectedFolder = isset($_GET['folder']) ? $_GET['folder'] : basename($folders[0]);
 
-// Ensure the selected folder exists
+// making sure folder exissts 
 if (!in_array($imgDir . $selectedFolder, $folders)) {
-    $selectedFolder = basename($folders[0]);  // Default to the first folder if invalid folder selected
+    $selectedFolder = basename($folders[0]); 
+     //uses first folder if nothing is selected 
 }
 
-// Fetch images from the selected folder
+// get pics from that folder
 $imgArray = glob($imgDir . $selectedFolder . '/*.JPG');
 $imgNames = [];
 
