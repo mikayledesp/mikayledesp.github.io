@@ -2,9 +2,10 @@
 function imgGenerate() {
     $imgArray = glob(__DIR__ . "/../images/*.JPG");
 
-    foreach ($imgArray as $img) {
-        $src = "images/" . basename($img);
-        echo "<img src='$src' alt='Gallery Image'>";
+    foreach ($imgArray as $image) {
+        $img = "images/" . basename($image);
+        $idName = basename($image, ".JPG");
+        echo "<img id='$idName'src='$img' alt='Gallery Image'>";
     }
 }
 ?>
