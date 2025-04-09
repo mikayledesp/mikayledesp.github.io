@@ -1,11 +1,11 @@
 <?php
 function imgGenerate() {
-    $imgArray = glob(__DIR__ . "/../images/*.{jpg,JPG}", GLOB_BRACE);  // Absolute path for PHP
+    $imgArray = glob(__DIR__ . "/../images/*.JPG"); 
     $imgNames = [];
 
     foreach ($imgArray as $image) {
-        $fileName = basename($image);  // e.g., "photo.JPG"
-        $nameOnly = pathinfo($fileName, PATHINFO_FILENAME);  // e.g., "photo"
+        $fileName = basename($image);  
+        $nameOnly = pathinfo($fileName, PATHINFO_FILENAME);  
         $imgNames[] = $nameOnly;
     }
 
