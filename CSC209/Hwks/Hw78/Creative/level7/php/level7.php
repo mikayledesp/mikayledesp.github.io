@@ -1,20 +1,19 @@
 
 <?php
-// Directory where image folders are located
+// Directory with the images
 $imgDir = 'images/';
 
-// Fetch all folder names (directories within the 'images' folder)
+// getting folder names 
 $folders = array_filter(glob($imgDir . '*'), 'is_dir');
 
-// Get the selected folder from the URL, or default to the first folder
-$selectedFolder = isset($_GET['folder']) ? $_GET['folder'] : basename($folders[0]);
+// Getting the selected folder from button in html
+$selectedFolder = $_GET['folder'] ?? basename($folders[0]);
 
-// Ensure the selected folder exists
 if (!in_array($imgDir . $selectedFolder, $folders)) {
-    $selectedFolder = basename($folders[0]);  // Default to the first folder if invalid folder selected
+    $selectedFolder = basename($folders[0]);
 }
 
-// Fetch images from the selected folder
+// get pics from that folder
 $imgArray = glob($imgDir . $selectedFolder . '/*.JPG');
 $imgNames = [];
 
@@ -26,13 +25,17 @@ foreach ($imgArray as $image) {
 $imgCount = count($imgNames);
 
 
-$currentSlide = isset($_GET['slide']) ? $_GET['slide'] : 1;
-$currentSlide = max(1, min($currentSlide, $imgCount)); 
+$currentSlide = $_GET['slide'] ?? 1;
+$currentSlide = max(1, min($currentSlide, $imgCount));
 
-// generate html with caption as well using the image names 
+// generate html with caption as well using the image names
 $slidesHtml = "";
 for ($i = 0; $i < $imgCount; $i++) {
-    $displayStyle = ($i + 1 == $currentSlide) ? 'block' : 'none';  
+    if ($i + 1 == $currentSlide) {
+        $displayStyle = 'block';
+    } else {
+        $displayStyle = 'none';
+    } 
     // create caption from file name
     $caption = ucfirst(str_replace('-', ' ', $imgNames[$i]));  
     $slidesHtml .= "<div class='mySlides' style='display: $displayStyle'>
@@ -45,7 +48,11 @@ for ($i = 0; $i < $imgCount; $i++) {
 // generate html with caption as well using the image names 
 $dotsHtml = "";
 for ($i = 1; $i <= $imgCount; $i++) {
-    $activeClass = ($i == $currentSlide) ? 'active' : '';
+    if ($i == $currentSlide) {
+        $activeClass = 'active';
+    } else {
+        $activeClass = '';
+    }
     $dotsHtml .= "<span class='dot $activeClass' onclick='location.href=\"?folder=$selectedFolder&slide=$i\"'></span>";
 }
 ?>

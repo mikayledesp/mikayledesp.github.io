@@ -12,10 +12,10 @@ foreach ($imgArray as $image) {
 
 $imgCount = count($imgNames);
 
-$currentSlide = isset($_GET['slide']) ? $_GET['slide'] : 1;
-$currentSlide = max(1, min($currentSlide, $imgCount)); 
 
-// Generate HTML for slides
+$currentSlide = $_GET['slide'] ?? 1;
+$currentSlide = max(1, min($currentSlide, $imgCount));
+// generate HTML for slides
 $slidesHtml = "";
 for ($i = 0; $i < $imgCount; $i++) {
     if ($i + 1 == $currentSlide) {
@@ -29,7 +29,7 @@ for ($i = 0; $i < $imgCount; $i++) {
                     </div>";
 }
 
-// Generate HTML for the dots navigation
+// generate html with caption as well using the image names 
 $dotsHtml = "";
 for ($i = 1; $i <= $imgCount; $i++) {
     if ($i == $currentSlide) {
