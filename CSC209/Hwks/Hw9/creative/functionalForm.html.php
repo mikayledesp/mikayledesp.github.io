@@ -11,7 +11,7 @@
   <li><a href="#contact">My Profile</a></li>
 </ul>
 
-<h1>Welcome To Mikayle's CookBook </h1>
+<h1>Become a Cooking Pro with MikaCook's! </h1>
 <p>This website details a conclusive cookbook where users can log in and see exclusive recipes. Users can submit their recipes for others to cook and rate. Users can also engage in fun cookoff competitions as well! </p>
 <br>
 <center><img src="images/food.png" alt="Girl in a jacket" width="570" height="370"><center>

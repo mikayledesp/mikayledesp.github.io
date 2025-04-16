@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/technical.css">
+<link rel="stylesheet" href="css/technicalStyle.css">
 </head>
 <body>
-<h1>Welcome! </h1>
-<p>Please Login to continue</p>
-
+<h1>Welcome To Mika's Job Board! </h1>
+<p>Please Login to see a 1,000+ jobs that get updated daily!</p>
+<div id="img-div">
+<img src="https://images.unsplash.com/photo-1681505531034-8d67054e07f6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="500" height="300">
+</div>
+<br>
+<p>Would you want to move to a new city and go on thr journey of your dreams? If yes, you've found the right place! Through this form you can log in and have personalized information for the next time you choose to start up the job process again!</p>
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
 <div id="id01" class="modal">
