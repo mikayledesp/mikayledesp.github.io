@@ -1,5 +1,31 @@
 
-body {font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;
+background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: hsl(21, 100%, 63%);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(247, 247, 247);
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: hotpink;
+}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -13,10 +39,10 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: hsl(21, 100%, 63%);
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 10px 0;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -118,4 +144,21 @@ span.pword {
   .cancelbtn {
      width: 100%;
   }
+}
+
+p{
+  color: white;
+}
+
+h1, h3{
+  text-align: center;
+  color: white;
+}
+#back-to-login{
+  text-decoration: none;
+  color:hotpink;
+  background-color: white;
+  padding: 14px 20px;
+  border: none;
+
 }

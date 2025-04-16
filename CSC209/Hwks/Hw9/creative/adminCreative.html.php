@@ -25,10 +25,10 @@ function countUsers() {
         if (is_array($users)) {
             $count = count($users);
 
-            echo "Total Users: " . $count . "<br>";
+            echo "<h3> Total Users: </h3><center>" . $count . "<center><br>";
             // actaully prints out the usernames if there are any
             if ($count > 0) {
-                echo "Usernames:<br>";
+                echo "<p> Usernames: </p>";
                 foreach ($users as $user) {
                     if (isset($user["uname"])) {
                         echo $user["uname"] . "<br>";
@@ -45,7 +45,9 @@ function countUsers() {
 
 countUsers();
 ?>
-
+<br>
+<br>
+<a id="back-to-login"href="functionalForm.html.php">Back to Login</a>
 
 </body>
 </html>
