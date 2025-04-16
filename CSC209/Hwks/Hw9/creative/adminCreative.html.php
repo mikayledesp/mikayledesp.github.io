@@ -6,9 +6,16 @@
 </head>
 <body>
 <h1>Admin View</h1>
-
+<center>
+<form method="post">
+<input type="submit" name="btn-data" value="Load User Data">
+</form>
+</center>
 
 <?php
+if(isset($_POST['btn-data'])){
+    countUsers();
+}
 function countUsers() {
     $file_path = "outputCreative/users.json";
 
@@ -43,7 +50,7 @@ function countUsers() {
 }
 
 
-countUsers();
+
 ?>
 <br>
 <br>
