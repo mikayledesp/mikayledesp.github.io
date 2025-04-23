@@ -3,7 +3,7 @@
 body{
     font-family: "Figtree", sans-serif;
     background-image: url("../images/background.png");
-    background-size: cover;
+    background-size: auto;
 
 }
 .navbar{
@@ -21,18 +21,11 @@ h1{
     font-weight: 500;
 }
 
-.card{
-    width: 20rem;
-    padding: 20px;
-    margin-left: 15rem;
-    background-color: #DD97BC;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 .diary-title{
     color: white;
 }
 .btn-warning{
-background-color: #E2C27D;
+background-color: white;
 border: #E2C27D;
 }
 .author{
@@ -43,22 +36,30 @@ border: #E2C27D;
     --bs-btn-padding-y: .75rem; 
     --bs-btn-padding-x: 1.5rem; 
     --bs-btn-font-size: 1rem;
-    background-color: #E2C27D;
-    margin-left: 2rem;
-    position: absolute;
-    bottom: 8px;
+    background-color: #e1ad3c;
+    margin: 2rem;
+
 }
 #btn-view-past{
     --bs-btn-padding-y: .75rem; 
     --bs-btn-padding-x: 1.5rem; 
     --bs-btn-font-size: 1rem;
-    background-color: #FE56AF;
-    position: absolute;
-    margin-left: 68rem;
-    bottom: 8px;
+    background-color: #ffffff;
+    margin: 2rem;
+
+}
+#btn-view-past:hover, #btn-view-past:focus, #btn-darkmode:hover,#btn-darkmode:focus{
+  background-color:#da4a97 !important ;
+  transform: translateY(-1px) !important;
+
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* All Modal Styling  */
+/* All Modal Styling taken from w3 schools */
 
 /* Full-width input fields for modal */
 input[type=text], input[type=password] {
@@ -71,13 +72,13 @@ input[type=text], input[type=password] {
   }
   
 #btn-modal {
-    background-color:#E2C27D;
+     background-color:#E2C27D;
     border: none;
-    color:white;
+    color: white;
+    padding: 16px 32px;
     text-decoration: none;
-    margin: 8px 4px;
+    margin: 4px 2px;
     cursor: pointer;
-    border-radius:15px ;
 }
 
 /* Extra styles for the cancel button */
@@ -107,6 +108,7 @@ input[type=text], input[type=password] {
     float: right;
     padding-top: 16px;
   }
+
   
   /* The Modal (background) */
   .modal {
@@ -173,4 +175,46 @@ input[type=text], input[type=password] {
        width: 100%;
     }
   }
-    
+  
+  /* Card Styling */
+  #cardGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .card {
+    background-color: #DD97BC;
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: white;
+    font-family: "Figtree", sans-serif;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: #da4a97 ;
+  }
+  
+  .card h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card .author {
+    font-size: 0.9rem;
+    color: gainsboro;
+    margin-top: 1rem;
+  }
+  
+  #admin-text{
+    color: white;
+    margin-left: 10px;
+    padding-left: 10px;
+  }

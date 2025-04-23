@@ -20,7 +20,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Post</a>
+          <a class="nav-link" href="mainPageDark.html.php">Dark Mode</a>
         </li>
         <li class="nav-item">
           <button type="button" class="btn btn-warning"
@@ -31,19 +31,21 @@
     </div>
   </div>
 </nav>
+<!-- Hero -->
     <h1>Where journaling meets community</h1>
-    <div class="card">
-  <div class="card-body">
-    <h2 class="diary-title">Diary Entry # 1</h2>
-    <p class="entry-text"> Hi, this is my first diary entry.</p>
-    <p class="author">Posted By: @Mikiams<p>
+  <div class="btn-container">
+    <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">Post An Entry</a>
+    <button type="button" class="btn btn-warning" id="btn-view-past">View Past Entries</button>
   </div>
-  <!-- In order to make this dynamically we would need to load in title, text and author dynamically  -->
-</div>
-<button type="button" class="btn btn-warning" id="btn-darkmode">Dark Mode</button>
-<button type="button" class="btn btn-warning" id="btn-view-past">View Past Entries</button>
+  <!-- Loading in the diary entries -->
+  <div id="cardGrid"></div>
+<!-- Had to load in javascript file early since i called the function from it next -->
+<script src="js/cardGen.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", renderEntries);
+</script>
 
-<!-- LOGIN MODAL -->
+<!-- LOGIN MODAL FROM W3 SCHOOLS -->
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="php/saveUsers.php" method="post">
@@ -67,12 +69,12 @@
     </div>
   </form>
 </div>
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<p id="admin-text">Admin ? Click below<p>
+<a id="admin-text" href="adminApp.html.php">Administrative view</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
