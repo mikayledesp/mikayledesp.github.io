@@ -4,10 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/postStyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 <body>
+  <!-- nav bar from bootstrap -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Open Pages</a>
@@ -31,7 +32,7 @@
     </div>
   </div>
 </nav>
-<!-- LOGIN MODAL -->
+<!-- LOGIN MODAL FROM W3 SCHOOLS -->
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="php/saveUsers.php" method="post">
@@ -56,53 +57,19 @@
   </form>
 </div>
 <!-- start of page -->
-<h1>Admin Only View</h1>
-<center>
-<form method="post">
-<input type="submit" name="btn-data" value="Load User Data">
-</form>
-</center>
-
-<?php
-if(isset($_POST['btn-data'])){
-    countUsers();
-}
-function countUsers() {
-    $file_path = "outputFinal/users.json";
-
-    // checking if file exists 
-    if (file_exists($file_path)) {
-        // read the whole file
-        $file_content = file_get_contents($file_path);
-
-        // decode the JSON array of users
-        // true makes it into an array
-        $users = json_decode($file_content, true); 
-
-        // counts all the users in the array
-        if (is_array($users)) {
-            $count = count($users);
-
-            echo "<h3> Total Users: </h3><center>" . $count . "<center><br>";
-            // actaully prints out the usernames if there are any
-            if ($count > 0) {
-                echo "<p> Usernames: </p>";
-                foreach ($users as $user) {
-                    if (isset($user["uname"])) {
-                        echo $user["uname"] . "<br>";
-                    }
-                }
-                echo "<p> Posts: </p>";
-            }
-        }
-    } else {
-        // prints out error 
-        echo " EROR: FILE DOES NOT EXIST";
-    }
-}
-
-
-
-?>
+ <h1>Post Your Entry</h1>
+ <div class="post-container">
+ <form id="entryForm" action="php/renderEntries.php" method="post">
+    <input type="text" id="title" name="title" placeholder="Post Title" required />
+    <input type="text" id="text" name="text" placeholder="Write something..." required />
+    <input type="text" id="author" name="author" placeholder="Write your name..." required />
+    <!-- ideally i need to make a conditional so that if your not logged in this form cannot be filled  -->
+    <button type="submit" name="btn-data">Post</button>
+  </form>
+</div>
+  <script src="js/cardGen.js"></script>
+  <script>
+    document.getElementById("entryForm").addEventListener("submit", formSubmit);
+  </script>
 </body>
 </html>

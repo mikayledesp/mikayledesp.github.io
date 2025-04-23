@@ -29,14 +29,6 @@
       <img src="images/iconLogin.png" alt="Avatar" class="avatar">
     </div>
 
-    
-  <!-- <label for="uname"> Enter User Name:</label><br>
-  <input type="text" id="uname" name="uname" value="Mikayle0506"><br><br>
-  <label for="pword">Enter Password:</label><br>
-  <input type="text" id="pword" name="pword" ><br>
-  <input type="submit" value="Submit">
-    </form>  -->
-
     <label for="uname"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 

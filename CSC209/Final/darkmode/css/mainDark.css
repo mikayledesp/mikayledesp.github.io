@@ -2,7 +2,7 @@
 
 body{
     font-family: "Figtree", sans-serif;
-    background-image: url("../images/background.png");
+   background-color: #212427;
     background-size: cover;
 
 }
@@ -12,7 +12,7 @@ background-color:rgba(255, 192, 203, 0);
 
 h1{
     text-align: center;
-    color: #000000;
+    color: white;
     font-weight: 950;
     font-size: 76px;
     padding: 20px;
@@ -187,12 +187,12 @@ input[type=text], input[type=password] {
   }
   
   .card {
-    background-color: #DD97BC;
+    background-color: #da4a97;
     width: 300px;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    color: white;
+    color: black;
     font-family: "Figtree", sans-serif;
     text-overflow: clip;
     transition: transform 0.2s;
@@ -200,7 +200,7 @@ input[type=text], input[type=password] {
   
   .card:hover {
     transform: translateY(-5px);
-    background-color: #da4a97 ;
+    background-color: hotpink ;
   }
   
   .card h2 {

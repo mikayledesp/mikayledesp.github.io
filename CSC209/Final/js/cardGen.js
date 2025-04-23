@@ -1,4 +1,4 @@
-// submitting form and saving journal entries 
+
 function formSubmit(event) {
   const title = document.getElementById("title").value;
   const text = document.getElementById("text").value;
@@ -22,16 +22,15 @@ function formSubmit(event) {
   entries.push(newEntry);
 
   // save updated entries back to local storage
-  localStorage.setItem("journalEntries", JSON.stringify(entries));
+   localStorage.setItem("journalEntries", JSON.stringify(entries));
 
   // redirect to the main page
   window.location.href = "mainPage.html.php";
 }
 
-// render saved journal entries
 function renderEntries() {
   // get saved entries from local storage
-  let entries = localStorage.getItem("journalEntries");
+   let entries = localStorage.getItem("journalEntries");
 
   if (entries === null) {
     entries = [];
@@ -42,7 +41,7 @@ function renderEntries() {
   // find the container element
   const container = document.getElementById("cardGrid");
 
-
+// TO DO --> Figure out how to do this in PHP 
   // add each entry as a card
   for (let i = 0; i < entries.length; i++) {
     const entry = entries[i];
@@ -58,3 +57,4 @@ function renderEntries() {
     container.appendChild(card);
   }
 }
+// make object for the card 

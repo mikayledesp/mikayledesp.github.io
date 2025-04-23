@@ -20,7 +20,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="mainPageDark.html.php">Dark Mode</a>
+          <a class="nav-link" href="darkmode/mainPageDark.html.php">Dark Mode</a>
         </li>
         <li class="nav-item">
           <button type="button" class="btn btn-warning"
@@ -35,7 +35,7 @@
     <h1>Where journaling meets community</h1>
   <div class="btn-container">
     <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">Post An Entry</a>
-    <button type="button" class="btn btn-warning" id="btn-view-past">View Past Entries</button>
+    <a href="pastEntries.html.php" role="button" class="btn btn-warning" id="btn-view-past">View Past Entries</a>
   </div>
   <!-- Loading in the diary entries -->
   <div id="cardGrid"></div>
@@ -73,8 +73,9 @@
 <br>
 <br>
 <br>
-<p id="admin-text">Admin ? Click below<p>
+<p id="admin-text">Have an Admin account? Click below<p>
 <a id="admin-text" href="adminApp.html.php">Administrative view</a>
+<p></p>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
