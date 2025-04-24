@@ -29,6 +29,6 @@ $users[] = $new_user;
 // saving upated users to file 
 file_put_contents($file_path, json_encode($users)); 
 // sending back to html page 
-header("location:../index.html.php");  
+header("location:../mainPage.html.php");  
 exit();
 ?>

@@ -59,7 +59,7 @@
       <label for="pword"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="pword" required>
         
-      <button type="submit" id="btn-modal">Login</button>
+      <button type="submit" id="btn-modal" >Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
