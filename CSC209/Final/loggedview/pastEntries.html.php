@@ -1,11 +1,14 @@
-<!-- This view will mostly consist of styled forms that take in user input and dynamnically load in other cards into the container -->
+<!--used session_start taken from : https://www.php.net/manual/en/function.session-start.php -->
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/postStyles.css">
+    <link rel="stylesheet" href="../css/postStyles.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg">
@@ -17,15 +20,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="mainPage.html.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="loggedInmainPage.html.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mainPageDark.html.php">Dark Mode</a>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-warning"
-          onclick="document.getElementById('id01').style.display='block'"
-          >Login</button>
+        <span class="nav-link">Logged in as <strong><?php echo htmlspecialchars($_SESSION['uname']); ?></strong></span>
         </li>
       </ul>
     </div>

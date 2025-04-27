@@ -59,9 +59,11 @@
 <!-- start of page -->
  <h1>Post Your Entry</h1>
  <div class="post-container">
- <form id="entryForm" action="php/renderEntries.php" method="post">
+ <form id="entryForm" action="php/savePost.php" method="post">
     <input type="text" id="title" name="title" placeholder="Post Title" required />
     <input type="text" id="text" name="text" placeholder="Write something..." required />
+    <input type="text" id="text" name="text" placeholder="Anonymous, log in to add username" disabled />
+    <input type="text" name="value" value = "Anonymous" disabled>
     <!-- Make author = to anonymous  -->
     <!-- ideally i need to make a conditional so that if your not logged in this form cannot be filled  -->
     <button type="submit" name="btn-data">Post</button>

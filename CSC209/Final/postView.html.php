@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/postStyles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- nav bar from bootstrap -->
@@ -35,7 +35,7 @@
 <!-- LOGIN MODAL FROM W3 SCHOOLS -->
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="php/saveUsers.php" method="post">
+  <form class="modal-content animate" action="php/savePost.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/iconLogin.png" alt="Avatar" class="avatar">
@@ -56,13 +56,14 @@
     </div>
   </form>
 </div>
+
 <!-- start of page -->
  <h1>Post Your Entry</h1>
  <div class="post-container">
- <form id="entryForm" action="php/renderEntries.php" method="post">
+ <form id="entryForm" action="php/savePost.php" method="post">
     <input type="text" id="title" name="title" placeholder="Post Title" required />
     <input type="text" id="text" name="text" placeholder="Write something..." required />
-    <input type="text" id="author" name="author" placeholder="Write your name..." required />
+    <input type="text" name="value" value = "Anonymous, log in to add name" disabled>
     <!-- ideally i need to make a conditional so that if your not logged in this form cannot be filled  -->
     <button type="submit" name="btn-data">Post</button>
   </form>

@@ -1,34 +1,48 @@
 <?php
+
+
+// Handle User Data (Login Process)
 $uname = $_POST["uname"];
 $pword = $_POST["pword"];
-// echo "Welcome " . $uname . "!";
 
-// path 2 json file
-$file_path = "../outputFinal/users.json";
+// Path to the centralized users file
+$users_file_path = "../outputFinal/users.json";
 
-// create directory if it doesnt exis
-if (!file_exists(dirname($file_path))) {
-    mkdir(dirname($file_path), 0777, true); // Creates the folder with full permissions
+// Create directory if it doesn't exist
+if (!file_exists(dirname($users_file_path))) {
+    mkdir(dirname($users_file_path), 0777, true);
 }
 
-// if file oesnt exist 
-if (file_exists($file_path)) {
-    $existing_data = file_get_contents($file_path);
-    $users = json_decode($existing_data, true); // decode into an array
+// If the users file exists, fetch existing data; otherwise, initialize an empty array
+if (file_exists($users_file_path)) {
+    $existing_users_data = file_get_contents($users_file_path);
+    $users = json_decode($existing_users_data, true); // Decode into an array
 } else {
-    $users = []; // Initialize empty array if file doesn't exist
+    $users = [];
 }
 
-// adding new users 
-$new_user = [
-    "uname" => $uname,
-    "pword" => $pword
-];
-$users[] = $new_user;
+// Check if the user exists, if not, add them to the users list
+$user_exists = false;
+foreach ($users as $user) {
+    if ($user['uname'] === $uname) {
+        $user_exists = true;
+        break;
+    }
+}
 
-// saving upated users to file 
-file_put_contents($file_path, json_encode($users)); 
-// sending back to html page 
-header("location:../mainPage.html.php");  
+if (!$user_exists) {
+    // Add new user
+    $new_user = [
+        "uname" => $uname,
+        "pword" => $pword // Use hashed passwords for security
+    ];
+    $users[] = $new_user;
+
+    // Save the updated users array to the users file
+    file_put_contents($users_file_path, json_encode($users));
+}
+
+// Redirect to the main page
+header("location:../loggedview/loggedInmainPage.html.php");  
 exit();
 ?>

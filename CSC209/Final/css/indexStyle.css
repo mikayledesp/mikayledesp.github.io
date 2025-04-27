@@ -21,6 +21,10 @@ h1{
     font-weight: 500;
 }
 
+.navbar-text{
+  margin: top 5px; ;
+}
+
 .diary-title{
     color: white;
 }
