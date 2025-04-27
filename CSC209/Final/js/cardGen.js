@@ -26,21 +26,30 @@ function formSubmit(event) {
 
 
 function renderEntries() {
-  // Get saved entries from local storage
-  let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
+  // get saved entries from local storage
+  let entries = localStorage.getItem("journalEntries");
 
-  // Find the container element
+  if (entries === null) {
+    entries = [];
+  } else {
+    entries = JSON.parse(entries);
+  }
+
+  // find the container element
   const container = document.getElementById("cardGrid");
 
-  // Add each entry as a card
-  entries.forEach(entry => {
+  // add each entry as a card
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i];
+
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
       <h2>${entry.title}</h2>
       <p>${entry.text}</p>
-      <p class="author">${entry.author}</p>
+      <p class="author"> ${entry.author}</p>
     `;
+
     container.appendChild(card);
-  });
+  }
 }

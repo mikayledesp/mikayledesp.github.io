@@ -25,7 +25,7 @@
             <li class="nav-item">
           <button type="button" class="btn btn-warning"
           onclick="document.getElementById('id01').style.display='block'"
-          >Login</button>
+          >Login to Post</button>
         </li>
           </ul>
         </div>
@@ -35,7 +35,7 @@
     <br>
     <h1>Where journaling meets community</h1>
   <div class="btn-container">
-    <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">Post An Entry</a>
+    <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">View Resources</a>
   </div>
   <!-- loading in the diary entries -->
   <div id="cardGrid"></div>
@@ -48,7 +48,7 @@
 <!-- LOGIN MODAL FROM W3 SCHOOLS -->
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="php/saveUsers.php" method="post">
+  <form class="modal-content animate" action="php/saveData.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/iconLogin.png" alt="Avatar" class="avatar">
