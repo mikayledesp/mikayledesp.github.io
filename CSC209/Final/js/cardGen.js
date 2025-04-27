@@ -21,7 +21,7 @@ function formSubmit(event) {
   localStorage.setItem("journalEntries", JSON.stringify(entries));
 
   // Redirect to the main page
-  window.location.href = "../loggedview/loggedInmainPage.html.php";
+  window.location.href = "../loggedview/mainPage.html.php";
 }
 
 
@@ -49,6 +49,7 @@ function renderEntries() {
       <p>${entry.text}</p>
       <p class="author"> ${entry.author}</p>
     `;
+    // generating delete button 
 
     container.appendChild(card);
   }

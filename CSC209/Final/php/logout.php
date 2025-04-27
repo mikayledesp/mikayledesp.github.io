@@ -2,6 +2,6 @@
 session_start();
 session_unset();  // Clear all session variables
 session_destroy();  // Destroy the session
-header("Location: ../mainPage.html.php"); 
+header("Location: ../loginPage.html.php"); 
 exit();
 ?>
