@@ -28,4 +28,5 @@ if (file_exists($user_file_path)) {
 // Redirect to the main page
 header("Location: ../loggedview/loggedInmainPage.html.php");  
 exit();
+
 ?>

@@ -59,14 +59,12 @@
 
 <!-- start of page -->
  <h1>Post Your Entry</h1>
- <div class="post-container">
- <form id="entryForm" action="php/savePost.php" method="post">
+ <form  class="post-contaner"id="entryForm" action="php/savePost.php" method="post">
     <input type="text" id="title" name="title" placeholder="Post Title" required />
     <input type="text" id="text" name="text" placeholder="Write something..." required />
-    <input type="text" value="Anonymous, log in to add name" disabled readonly>
-    <!-- ideally i need to make a conditional so that if your not logged in this form cannot be filled  -->
-    <button type="submit" name="btn-data">Post</button>
-  </form>
+    <input type="text" id="author" name="author" placeholder="Anonymous, Log In to add a name" disabled/>
+    <button type="submit">Post</button>
+</form>
 </div>
   <script src="js/cardGen.js"></script>
   <script>
