@@ -3,7 +3,7 @@ function formSubmit(event) {
   
   const title = document.getElementById("title").value;
   const text = document.getElementById("text").value;
-  const author = document.getElementById("author") ? document.getElementById("author").value : "Anonymous";
+  const uname = document.getElementById("uname") ? document.getElementById("uname").value : "Anonymous";
 
   // Get existing entries from local storage
   let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
@@ -12,7 +12,7 @@ function formSubmit(event) {
   const newEntry = {
     title: title,
     text: text,
-    author: author
+    uname: uname
   };
 
   entries.push(newEntry);
@@ -21,7 +21,7 @@ function formSubmit(event) {
   localStorage.setItem("journalEntries", JSON.stringify(entries));
 
   // Redirect to the main page
-  window.location.href = "mainPage.html.php";
+  window.location.href = "../loggedview/loggedInmainPage.html.php";
 }
 
 

@@ -1,14 +1,6 @@
-<?php
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['uname'])) {
-    // Redirect to login page if not logged in
-    header("Location: ../mainPage.html.php");
-    exit();
-}
+<?php session_start();
+// $_SESSION['uname'] = $username; 
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,7 +38,7 @@ if (!isset($_SESSION['uname'])) {
     <br>
     <h1>Where journaling meets community</h1>
     <div class="btn-container">
-      <a href="../postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">Post An Entry</a>
+      <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">Post An Entry</a>
       <a href="resourceView.html" class="btn btn-warning" id="btn-view-past" role="button">See Resources</a>
     </div>
     <!-- loading in the diary entries -->

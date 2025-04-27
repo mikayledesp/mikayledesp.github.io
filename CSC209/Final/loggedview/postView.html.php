@@ -1,4 +1,7 @@
 <!-- This view will mostly consist of styled forms that take in user input and dynamnically load in other cards into the container -->
+<?php session_start();
+ $_SESSION['uname'] = $username; 
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -59,13 +62,14 @@
 
 <!-- start of page -->
  <h1>Post Your Entry</h1>
- <form  class="post-contaner"id="entryForm" action="php/saveData.php" method="post">
+<form class="post-container" id="entryForm" action="../php/saveData.php" method="post">
     <input type="text" id="title" name="title" placeholder="Post Title" required />
     <input type="text" id="text" name="text" placeholder="Write something..." required />
-    <input type="text" id="author" name="author" placeholder="Anonymous, Log In to add a name" disabled/>
+    <!-- Hidden input for the logged-in user's name (populate dynamically) -->
+    <input type="hidden" id="uname" name="uname" value="<?php echo $_SESSION['uname']; ?>" />
     <button type="submit">Post</button>
 </form>
-</div>
+
   <script src="js/cardGen.js"></script>
   <script>
     document.getElementById("entryForm").addEventListener("submit", formSubmit);
