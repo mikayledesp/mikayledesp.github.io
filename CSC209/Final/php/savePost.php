@@ -4,31 +4,34 @@ $title = $_POST["title"];
 $text = $_POST["text"];
 $author = $_POST["author"] !== "" ? $_POST["author"] : "Anonymous";
 
-// Path to the centralized posts file
-$posts_file_path = "../outputFinal/allPosts.json";
+// Path to the author's user file
+$user_dir = "../outputFinal/$author";
+$user_file_path = "$user_dir/user.json";
 
-// Create directory if it doesn't exist
-if (!file_exists(dirname($posts_file_path))) {
-    mkdir(dirname($posts_file_path), 0777, true);
-}
-
-// If the posts file exists, fetch existing data; otherwise, initialize an empty array
-if (file_exists($posts_file_path)) {
-    $existing_posts_data = file_get_contents($posts_file_path);
-    $posts = json_decode($existing_posts_data, true); // Decode into an array
+// Check if the user file exists
+if (file_exists($user_file_path)) {
+    $user_data = json_decode(file_get_contents($user_file_path), true);
 } else {
-    $posts = [];
+    // If somehow missing, create new basic user data
+    $user_data = [
+        "uname" => $author,
+        "pword" => "", // unknown password
+        "posts" => []
+    ];
 }
 
-// Add the new post to the array
+// Add the new post to the user's posts
 $new_post = [
     "title" => $title,
     "text" => $text,
     "author" => $author
 ];
-$posts[] = $new_post;
+$user_data["posts"][] = $new_post;
 
-// Save the updated posts array to the posts file
-file_put_contents($posts_file_path, json_encode($posts));
+// Save back to the user file
+file_put_contents($user_file_path, json_encode($user_data));
 
+// (Optional: redirect somewhere after posting)
+header("Location:../mainPage.html.php");
+exit();
 ?>

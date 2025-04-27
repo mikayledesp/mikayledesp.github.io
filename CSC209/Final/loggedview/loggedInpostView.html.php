@@ -36,7 +36,7 @@ session_start();
 <!-- LOGIN MODAL FROM W3 SCHOOLS -->
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="php/savePosts.php" method="post">
+  <form class="modal-content animate" action="../php/saveUsers.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/iconLogin.png" alt="Avatar" class="avatar">
@@ -60,7 +60,7 @@ session_start();
 <!-- start of page -->
  <h1>Post Your Entry</h1>
  <div class="post-container">
- <form id="entryForm" action="php/saveData.php" method="post">
+ <form id="entryForm" action="../php/savePosts.php" method="post">
     <input type="text" id="title" name="title" placeholder="Post Title" required />
     <input type="text" id="text" name="text" placeholder="Write something..." required />
     <!-- ideally i need to make a conditional so that if your not logged in this form cannot be filled  -->

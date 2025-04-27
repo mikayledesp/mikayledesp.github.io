@@ -1,48 +1,31 @@
 <?php
-
-
 // Handle User Data (Login Process)
 $uname = $_POST["uname"];
-$pword = $_POST["pword"];
+$pword_raw = $_POST["pword"];
 
-// Path to the centralized users file
-$users_file_path = "../outputFinal/users.json";
+// Path to the user's folder and user file
+$user_dir = "../outputFinal/$uname";
+$user_file_path = "$user_dir/user.json";
 
-// Create directory if it doesn't exist
-if (!file_exists(dirname($users_file_path))) {
-    mkdir(dirname($users_file_path), 0777, true);
+// Create user directory if it doesn't exist
+if (!file_exists($user_dir)) {
+    mkdir($user_dir, 0777, true);
 }
 
-// If the users file exists, fetch existing data; otherwise, initialize an empty array
-if (file_exists($users_file_path)) {
-    $existing_users_data = file_get_contents($users_file_path);
-    $users = json_decode($existing_users_data, true); // Decode into an array
+// If the user file exists, load existing data
+if (file_exists($user_file_path)) {
+    $user_data = json_decode(file_get_contents($user_file_path), true);
 } else {
-    $users = [];
-}
-
-// Check if the user exists, if not, add them to the users list
-$user_exists = false;
-foreach ($users as $user) {
-    if ($user['uname'] === $uname) {
-        $user_exists = true;
-        break;
-    }
-}
-
-if (!$user_exists) {
-    // Add new user
-    $new_user = [
+    // Create a new user file
+    $user_data = [
         "uname" => $uname,
-        "pword" => $pword // Use hashed passwords for security
+        "pword" => password_hash($pword_raw, PASSWORD_DEFAULT), // Securely hashed password
+        "posts" => [] // Start with empty posts array
     ];
-    $users[] = $new_user;
-
-    // Save the updated users array to the users file
-    file_put_contents($users_file_path, json_encode($users));
+    file_put_contents($user_file_path, json_encode($user_data));
 }
 
 // Redirect to the main page
-header("location:../loggedview/loggedInmainPage.html.php");  
+header("Location: ../loggedview/loggedInmainPage.html.php");  
 exit();
 ?>

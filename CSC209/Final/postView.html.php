@@ -63,7 +63,7 @@
  <form id="entryForm" action="php/savePost.php" method="post">
     <input type="text" id="title" name="title" placeholder="Post Title" required />
     <input type="text" id="text" name="text" placeholder="Write something..." required />
-    <input type="text" name="value" value = "Anonymous, log in to add name" disabled>
+    <input type="text" value="Anonymous, log in to add name" disabled readonly>
     <!-- ideally i need to make a conditional so that if your not logged in this form cannot be filled  -->
     <button type="submit" name="btn-data">Post</button>
   </form>

@@ -28,55 +28,32 @@ function formSubmit(event) {
   window.location.href = "mainPage.html.php";
 }
 
-// function renderEntries() {
-//   // get saved entries from local storage
-//    let entries = localStorage.getItem("journalEntries");
-
-//   if (entries === null) {
-//     entries = [];
-//   } else {
-//     entries = JSON.parse(entries);
-//   }
-
-//   // find the container element
-//   const container = document.getElementById("cardGrid");
-
-// // TO DO --> Figure out how to do this in PHP 
-//   // add each entry as a card
-//   for (let i = 0; i < entries.length; i++) {
-//     const entry = entries[i];
-
-//     const card = document.createElement("div");
-//     card.className = "card";
-//     card.innerHTML = `
-//       <h2>${entry.title}</h2>
-//       <p>${entry.text}</p>
-//       <p class="author">${entry.author}</p>
-//     `;
-
-//     container.appendChild(card);
-//   }
-// }
 function renderEntries() {
-  // Fetch all posts from the centralized posts file
-  fetch('outputFinal/allPosts.json')
-    .then(response => response.json())
-    .then(entries => {
-      const container = document.getElementById("cardGrid");
-      container.innerHTML = ""; // Clear previous content if any
+  // get saved entries from local storage
+   let entries = localStorage.getItem("journalEntries");
 
-      entries.forEach(entry => {
-        const card = document.createElement("div");
-        card.className = "card";
-        card.innerHTML = `
-          <h2>${entry.title}</h2>
-          <p>${entry.text}</p>
-          <p class="author">${entry.author}</p>
-        `;
-        container.appendChild(card);
-      });
-    })
-    .catch(error => {
-      console.error("Error fetching entries:", error);
-    });
-}
+  if (entries === null) {
+    entries = [];
+  } else {
+    entries = JSON.parse(entries);
+  }
+
+  // find the container element
+  const container = document.getElementById("cardGrid");
+
+// TO DO --> Figure out how to do this in PHP 
+  // add each entry as a card
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i];
+
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <h2>${entry.title}</h2>
+      <p>${entry.text}</p>
+      <p class="author">${entry.author}</p>
+    `;
+
+    container.appendChild(card);
+  }}
+  
