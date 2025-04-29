@@ -38,6 +38,10 @@
       </div>
     </nav>
     <h1>Manage Your Posts</h1>
+    <div id="cardGrid" class="container mt-4"></div>
+
+<script src="../js/editEntries.js"></script> <!-- or paste the JS inline if you prefer -->
+<script src="../bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js" ></script>
 
 
 </body>

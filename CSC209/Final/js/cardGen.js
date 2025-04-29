@@ -28,24 +28,3 @@ function renderEntries() {
     })
 }
 
-
-
-
-
-
-// function deletePost(index) {
-//   // get saved entries from local storage
-//   let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
-
-//   // remove the selected entry
-//   entries.splice(index, 1);
-
-//   // save updated entries back to local storage
-//   localStorage.setItem("journalEntries", JSON.stringify(entries));
-
-  
-//   renderEntries();
-// }fetch 
-// function(){
-// generate 
-// }
