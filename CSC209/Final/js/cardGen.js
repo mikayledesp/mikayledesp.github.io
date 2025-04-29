@@ -32,6 +32,7 @@ function renderEntries() {
 
 
 
+
 // function deletePost(index) {
 //   // get saved entries from local storage
 //   let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");

@@ -140,4 +140,16 @@ span.pword {
 .post-container{
   display: flex;
   justify-content: center;
+ 
+}
+.big-container{
+  background-color: white !important;
+  border-radius: 16px;
+  margin: 32px;
+  margin-left: 300px;
+  margin-right: 300px;
+  padding-bottom: 20px;
+}
+#text{
+  margin-bottom: 20px;
 }

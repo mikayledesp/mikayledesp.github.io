@@ -10,7 +10,7 @@
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Open Pages</a>
+        <a class="navbar-brand " id="hero-text" href="#">Open Pages</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="darkmode/mainPageDark.html.php">Dark Mode</a>
+              <a class="nav-link" href="darkmode/loginPageDark.html.php">Dark Mode</a>
             </li>
             <li class="nav-item">
           <button type="button" class="btn btn-warning"
@@ -34,7 +34,7 @@
 <!-- Hero -->
     <br>
     <br>
-    <h1>Where journaling meets community</h1>
+    <h1>Where Journaling Meets Community</h1>
     <br>
     <br>
   <div class="btn-container">

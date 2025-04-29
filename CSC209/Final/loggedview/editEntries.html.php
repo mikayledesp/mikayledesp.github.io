@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="mainPage.html.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="darkmode/mainPageDark.html.php">Dark Mode</a>
@@ -37,32 +37,8 @@
         </div>
       </div>
     </nav>
-<!-- Hero -->
-    <br>
-    <h1>Welcome Back👋</h1>
-    <h2>Your Journal Awaits!</h2>
-  <div class="btn-container">
-    <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">Post An Entry</a>
-    <a href="editEntries.html.php" class="btn btn-warning" id="btn-view-past" role="button">Edit Entries</a>
-  </div>
-  <!-- loading in the diary entries -->
-  <div id="cardGrid"></div>
-<!-- Had to load in javascript file early since i called the function from it next -->
-<script src="../js/cardGen.js"></script>
-<script>
-  window.addEventListener("DOMContentLoaded",renderEntries);
-  console.log(window.localStorage.getItem("uname"));
-</script>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<p id="admin-text">Have an Admin account? Click below<p>
-<a id="admin-text" href="../adminApp.html.php">Administrative view</a>
-  <script src="../bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js" ></script>
-  </body>
+    <h1>Manage Your Posts</h1>
+
+
+</body>
 </html>

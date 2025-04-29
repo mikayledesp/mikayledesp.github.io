@@ -36,6 +36,7 @@
   </div>
 </nav>
 <!-- start of page -->
+ <div class="big-container">
  <h1>Post Your Entry</h1>
  <div class="post-container">
 <form  id="entryForm" action="../php/savePost.php" method="post">
@@ -45,6 +46,7 @@
     <input type="hidden" id="uname" name="uname" value="uname"/>
     <button type="submit"  class="btn btn-warning" style="display: block;">Post</button>
 </form>
+</div>
 </div>
   <script src="../js/cardGen.js"></script>
   <script>

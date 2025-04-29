@@ -19,15 +19,20 @@ h1{
 }
 h2{
     text-align: center;
-    color: #191919;
-    font-weight: 950;
-    font-size: 55px;
+    color:  #1B1B1B;
+    font-weight: 750;
+    font-size: 45px;
 }
 h3{
+  text-align: left;
+    color: rgb(72, 68, 68)1B;
+    font-weight: 600;
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+hr{
+  width: 75%;
   text-align: center;
-    color: #191919;
-    font-weight: 950;
-    font-size: 45px;
 }
 
 .navbar-brand{
@@ -35,7 +40,7 @@ h3{
 }
 
 .navbar-text{
-  margin: top 5px; ;
+  margin: top 5px; 
 }
 
 .diary-title{
@@ -53,21 +58,21 @@ border: #E2C27D;
     --bs-btn-padding-y: .75rem; 
     --bs-btn-padding-x: 1.5rem; 
     --bs-btn-font-size: 1rem;
-    background-color: #e1ad3c;
+    background-color: #da4a97;
     margin: 2rem;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
+    color:white;
 }
 #btn-view-past{
     --bs-btn-padding-y: .75rem; 
     --bs-btn-padding-x: 1.5rem; 
     --bs-btn-font-size: 1rem;
-    background-color: #ffffff;
+    background-color: #da4a97 ;
     margin: 2rem;
 
 }
 #btn-view-past:hover, #btn-view-past:focus, #btn-darkmode:hover,#btn-darkmode:focus{
-  background-color:#da4a97 !important ;
+  background-color:#E2C27D !important ;
   transform: translateY(-1px) !important;
 
 }
@@ -238,7 +243,52 @@ input[type=text], input[type=password] {
     padding-left: 10px;
   }
 
-  .infographic, .graphics{
+ .graphics{
   display: flex;
   justify-content: center;
   }
+  #header-image-menu img{
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+.content{
+  text-align: left !important;
+  margin-top: 18px;
+  margin-left: 2px;
+}
+#title{
+  text-align: left !important;
+  font-size: 45px !important;
+}
+.subtitle{
+  color: #545151;
+  font-size: x-small;
+  margin-left: 2px;
+}
+.text{
+font-weight: 500;
+font-size: 20px;
+margin-left: 35px;
+margin-top: 15px;
+}
+.link{
+  margin-left: 40px !important;
+  color: white;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;}
+#longlink:hover{
+  box-shadow: inset 800px 0 0 0 #da4a97 !important;
+}
+.link:hover{
+  text-decoration: none;
+  box-shadow: inset 300px 0 0 0 #da4a97;
+  color:  #1B1B1B;
+}
+li{
+  color: white;
+}
+#heading{
+  margin-left: 35px;
+  margin-top: 15px;
+}
