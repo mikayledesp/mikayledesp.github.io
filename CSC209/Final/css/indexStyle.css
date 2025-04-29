@@ -12,11 +12,24 @@ background-color:rgba(255, 192, 203, 0);
 
 h1{
     text-align: center;
-    color: #000000;
+    color: #191919;
     font-weight: 950;
     font-size: 76px;
     padding: 20px;
 }
+h2{
+    text-align: center;
+    color: #191919;
+    font-weight: 950;
+    font-size: 55px;
+}
+h3{
+  text-align: center;
+    color: #191919;
+    font-weight: 950;
+    font-size: 45px;
+}
+
 .navbar-brand{
     font-weight: 500;
 }
@@ -223,4 +236,9 @@ input[type=text], input[type=password] {
     color: white;
     margin-left: 10px;
     padding-left: 10px;
+  }
+
+  .infographic, .graphics{
+  display: flex;
+  justify-content: center;
   }

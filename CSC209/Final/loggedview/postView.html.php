@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/postStyles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- nav bar from bootstrap -->
@@ -27,29 +27,31 @@
           <a class="nav-link" href="../darkmode/mainPageDark.html.php">Dark Mode</a>
         </li>
         <li class="nav-item">
-          <button type="button" class="btn btn-warning"
-          onclick="document.getElementById('id01').style.display='block'"
-          >Login</button>
+            <form method="post" action="../php/logout.html.php">
+  <button type="submit" class="btn btn-warning" id="btn-darkmode"style="display: block;"> Log out </button>
+</form>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-
 <!-- start of page -->
  <h1>Post Your Entry</h1>
  <div class="post-container">
-<form  id="entryForm" action="../php/saveData.php" method="post">
+<form  id="entryForm" action="../php/savePost.php" method="post">
     <input type="text" id="title" name="title" placeholder="Post Title" required />
     <input type="text" id="text" name="text" placeholder="Write something..." required />
+
+    <input type="hidden" id="uname" name="uname" value="uname"/>
     <button type="submit"  class="btn btn-warning" style="display: block;">Post</button>
 </form>
 </div>
-
   <script src="../js/cardGen.js"></script>
   <script>
+    document.getElementById("uname").setAttribute("value", window.localStorage.getItem("uname"));
+    console.log(window.localStorage.getItem("uname"));
     document.getElementById("entryForm").addEventListener("submit", formSubmit);
   </script>
+  <script src="../bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>

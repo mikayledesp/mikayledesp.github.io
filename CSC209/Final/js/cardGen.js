@@ -1,56 +1,50 @@
-function formSubmit(event) {
-  event.preventDefault(); // Prevent default form submission behavior
-  
-  const title = document.getElementById("title").value;
-  const text = document.getElementById("text").value;
-  const uname = document.getElementById("uname") ? document.getElementById("uname").value : "Anonymous";
-
-  // Get existing entries from local storage
-  let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
-
-  // Add new entry
-  const newEntry = {
-    title: title,
-    text: text,
-    uname: uname
-  };
-
-  entries.push(newEntry);
-
-  // Save updated entries back to local storage
-  localStorage.setItem("journalEntries", JSON.stringify(entries));
-
-  // Redirect to the main page
-  window.location.href = "../loggedview/mainPage.html.php";
-}
-
-
 function renderEntries() {
-  // get saved entries from local storage
-  let entries = localStorage.getItem("journalEntries");
+  const uname = localStorage.getItem('uname');
+  const userJsonPath = `../outputFinal/${uname}/user.json`;
 
-  if (entries === null) {
-    entries = [];
-  } else {
-    entries = JSON.parse(entries);
-  }
+  fetch(userJsonPath)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch user data.');
+      }
+      return response.json();
+    })
+    .then(user_data => {
+      const entries = user_data.entries;
+      const container = document.getElementById("cardGrid");
+      container.innerHTML = "";
 
-  // find the container element
-  const container = document.getElementById("cardGrid");
+      entries.forEach(entry => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h2>${entry.title}</h2>
+          <p>${entry.text}</p>
+          <p class="author">Posted by ${user_data.uname}</p>
+        `;
 
-  // add each entry as a card
-  for (let i = 0; i < entries.length; i++) {
-    const entry = entries[i];
-
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <h2>${entry.title}</h2>
-      <p>${entry.text}</p>
-      <p class="author"> ${entry.author}</p>
-    `;
-    // generating delete button 
-
-    container.appendChild(card);
-  }
+        container.appendChild(card);
+      });
+    })
 }
+
+
+
+
+
+// function deletePost(index) {
+//   // get saved entries from local storage
+//   let entries = JSON.parse(localStorage.getItem("journalEntries") || "[]");
+
+//   // remove the selected entry
+//   entries.splice(index, 1);
+
+//   // save updated entries back to local storage
+//   localStorage.setItem("journalEntries", JSON.stringify(entries));
+
+  
+//   renderEntries();
+// }fetch 
+// function(){
+// generate 
+// }

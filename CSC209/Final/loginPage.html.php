@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Open Pages</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/indexStyle.css">
   </head>
   <body>
@@ -33,18 +33,19 @@
     </nav>
 <!-- Hero -->
     <br>
+    <br>
     <h1>Where journaling meets community</h1>
+    <br>
+    <br>
   <div class="btn-container">
-    <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">View Resources</a>
+    <a href="resourceView.html" class="btn btn-warning" id="btn-darkmode" role="button">View Resources</a>
   </div>
-<script>
-  window.addEventListener("DOMContentLoaded",renderEntries);
-</script>
+
 
 <!-- LOGIN MODAL FROM W3 SCHOOLS -->
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="php/saveData.php" method="post">
+  <form class="modal-content animate" action="php/saveUser.html.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/iconLogin.png" alt="Avatar" class="avatar">
@@ -65,6 +66,10 @@
     </div>
   </form>
 </div>
+<script>
+
+</script>
+
 <br>
 <br>
 <br>
@@ -77,6 +82,9 @@
 <br>
 <p id="admin-text">Have an Admin account? Click below<p>
 <a id="admin-text" href="adminApp.html.php">Administrative view</a>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" ></script>
+<br>
+<br>
+<p id="admin-text">Website by Mikayle Despaigne for CSC 209 </p>
+<script src="bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js" ></script>
   </body>
 </html>
