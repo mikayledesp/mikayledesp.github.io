@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Open Pages</title>
+    <link rel="stylesheet" href="css/mainDark.css">
     <link href="../bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/indexStyle.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg">
+</head>
+<body>
+  <!-- nav bar from bootstrap -->
+  <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Open Pages</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,10 +20,7 @@
               <a class="nav-link active" aria-current="page" href="mainPage.html.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="darkmode/mainPageDark.html.php">Dark Mode</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="editEntries.html.php">Edit Entries</a>
+              <a class="nav-link" href="../loggedview/postView.html.php">Light Mode</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../resourceView.html">Resources</a>
@@ -37,9 +34,25 @@
         </div>
       </div>
     </nav>
-    <h1>Manage Your Posts</h1>
-    <div id="cardGrid" class="container mt-4"></div>
-<script src="../js/editEntries.js"></script> 
-<script src="../bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js" ></script>
+<!-- start of page -->
+ <div class="big-container">
+ <h1>Post Your Entry</h1>
+ <div class="post-container">
+<form  id="entryForm" action="../php/savePost.php" method="post">
+    <input type="text" id="title" name="title" placeholder="Post Title" required />
+    <input type="text" id="text" name="text" placeholder="Write something..." required />
+
+    <input type="hidden" id="uname" name="uname" value="uname"/>
+    <button type="submit"  class="btn btn-warning" style="display: block;">Post</button>
+</form>
+</div>
+</div>
+  <script src="../js/cardGen.js"></script>
+  <script>
+    document.getElementById("uname").setAttribute("value", window.localStorage.getItem("uname"));
+    console.log(window.localStorage.getItem("uname"));
+    document.getElementById("entryForm").addEventListener("submit", formSubmit);
+  </script>
+  <script src="../bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>

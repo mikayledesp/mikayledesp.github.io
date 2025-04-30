@@ -6,6 +6,7 @@
 <body>
 <h1> Admin Only View</h1>
 <center><p>To Proceed, Enter Admin Password</p><center>
+<p>Hint password is Admin1</p>
 <center>
     <form id="pswd">
     <input type="password" id="validate" 

@@ -25,6 +25,12 @@ h1{
     font-size: 76px;
     padding: 20px;
 }
+h2{
+  text-align: center;
+    color: white;
+    font-weight: 750;
+    font-size: 45px;
+}
 .navbar-brand{
     font-weight: 500;
 }
@@ -227,4 +233,12 @@ input[type=text], input[type=password] {
     color: white;
     margin-left: 10px;
     padding-left: 10px;
+  }
+  .big-container{
+    background-color: white !important;
+    border-radius: 16px;
+    margin: 32px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-bottom: 20px;
   }

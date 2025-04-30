@@ -72,3 +72,10 @@ function renderEditableEntries() {
     renderEditableEntries();
   });
   
+  document.getElementById("clearAllBtn").addEventListener("click", function() {
+    if (confirm("Are you sure you want to delete ALL entries?")) {
+      fetch('../php/clearAll.php', { method: 'POST' })
+        .then(() => renderEditableEntries());
+    }
+  });
+  

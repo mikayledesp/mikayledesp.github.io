@@ -20,10 +20,7 @@
               <a class="nav-link active" aria-current="page" href="mainPage.html.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="darkmode/mainPageDark.html.php">Dark Mode</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="communityTab.html.php">Community </a>
+              <a class="nav-link" href="../darkmode/postViewDark.html.php">Dark Mode</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../resourceView.html">Resources</a>

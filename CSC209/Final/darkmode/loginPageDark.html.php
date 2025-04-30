@@ -17,28 +17,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link " aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../loginPage.html.php">Light Mode</a>
             </li>
-            <li class="nav-item">
-          <button type="button" class="btn btn-warning"
-          onclick="document.getElementById('id01').style.display='block'"
-          >Login to Post</button>
+            <a class="nav-link" href="../resourceView.html"> Resources</a>
         </li>
           </ul>
         </div>
       </div>
     </nav>
 <!-- Hero -->
+<br>
     <br>
     <br>
-    <h1>Where Journaling Meets Community</h1>
-    <br>
+    <h1>Every journal begins with an open page.</h1>
+    <h2> Start yours today.</h2>
     <br>
   <div class="btn-container">
-    <a href="resourceView.html" class="btn btn-warning" id="btn-darkmode" role="button">View Resources</a>
+    <button type="button" class="btn btn-warning" id="btn-darkmode" onclick="document.getElementById('id01').style.display='block'">Login or Register To Start</button>
   </div>
 
 

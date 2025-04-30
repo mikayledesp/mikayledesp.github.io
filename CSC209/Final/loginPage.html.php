@@ -23,12 +23,7 @@
               <a class="nav-link" href="darkmode/loginPageDark.html.php">Dark Mode</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="loggedview/communityTab.html.php">Community</a>
-            </li>
-            <li class="nav-item">
-          <button type="button" class="btn btn-warning"
-          onclick="document.getElementById('id01').style.display='block'"
-          >Login to Post</button>
+          <a href="resourceView.html" class="nav-link" >View Resources</a>
         </li>
           </ul>
         </div>
@@ -37,11 +32,12 @@
 <!-- Hero -->
     <br>
     <br>
-    <h1>Where Journaling Meets Community</h1>
     <br>
+    <h1>Every journal begins with an open page.</h1>
+    <h2> Start yours today.</h2>
     <br>
   <div class="btn-container">
-    <a href="resourceView.html" class="btn btn-warning" id="btn-darkmode" role="button">View Resources</a>
+    <button type="button" class="btn btn-warning" id="btn-darkmode" onclick="document.getElementById('id01').style.display='block'">Login or Register To Start</button>
   </div>
 
 
@@ -60,9 +56,6 @@
       <input type="password" placeholder="Enter Password" name="pword" required>
         
       <button type="submit" id="btn-modal" >Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>

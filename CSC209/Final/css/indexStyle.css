@@ -17,6 +17,7 @@ h1{
     font-size: 76px;
     padding: 20px;
 }
+
 h2{
     text-align: center;
     color:  #1B1B1B;
@@ -294,4 +295,12 @@ li{
 #heading{
   margin-left: 35px;
   margin-top: 15px;
+}
+
+.help{
+  border: #545151 solid 2px;
+}
+.list-group{
+  width: 65%;
+  margin-left: 10px;
 }
