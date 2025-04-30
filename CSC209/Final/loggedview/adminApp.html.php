@@ -109,7 +109,7 @@ function deleteFolder($folder) {
 }
 ?>
 
-<!-- Tiny JavaScript popup to confirm deletion -->
+
 <script>
 function confirmDelete(username) {
   return confirm('Are you sure you want to permanently delete user "' + username + '"?');
