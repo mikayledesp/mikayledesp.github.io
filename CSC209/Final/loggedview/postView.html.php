@@ -1,7 +1,3 @@
-<!-- This view will mostly consist of styled forms that take in user input and dynamnically load in other cards into the container -->
-<!-- <session_start();
- $_POST['uname'] = $username; 
-?> -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,29 +8,35 @@
 </head>
 <body>
   <!-- nav bar from bootstrap -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Open Pages</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="mainPage.html.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../darkmode/mainPageDark.html.php">Dark Mode</a>
-        </li>
-        <li class="nav-item">
+  <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Open Pages</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="mainPage.html.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="darkmode/mainPageDark.html.php">Dark Mode</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="communityTab.html.php">Community </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../resourceView.html">Resources</a>
+            </li>
+            <li class="nav-item">
             <form method="post" action="../php/logout.html.php">
-  <button type="submit" class="btn btn-warning" id="btn-darkmode"style="display: block;"> Log out </button>
+  <button type="submit" class="btn btn-warning" id="btn-"style="display: block;"> Log out </button>
 </form>
         </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+          </ul>
+        </div>
+      </div>
+    </nav>
 <!-- start of page -->
  <div class="big-container">
  <h1>Post Your Entry</h1>

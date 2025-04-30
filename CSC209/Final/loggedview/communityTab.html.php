@@ -17,41 +17,31 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="../loginPage.html.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="darkmode/mainPageDark.html.php">Dark Mode</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="communityTab.html.php">Community </a>
+              <a class="nav-link" href="../communityTab.html.php">Community </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../resourceView.html">Resources</a>
             </li>
-            <li class="nav-item">
-            <form method="post" action="../php/logout.html.php">
-  <button type="submit" class="btn btn-warning" id="btn-"style="display: block;"> Log out </button>
-</form>
-        </li>
           </ul>
         </div>
       </div>
     </nav>
 <!-- Hero -->
     <br>
-    <h1>Welcome Back👋</h1>
-    <h2>Your Journal Awaits!</h2>
-  <div class="btn-container">
-    <a href="postView.html.php" class="btn btn-warning" id="btn-darkmode" role="button">Post An Entry</a>
-    <a href="editEntries.html.php" class="btn btn-warning" id="btn-view-past" role="button">Manage Entries</a>
-  </div>
-  <!-- loading in the diary entries -->
-  <div id="cardGrid"></div>
-<script src="../js/cardGen.js"></script>
-<script>
-  window.addEventListener("DOMContentLoaded",renderEntries);
-  console.log(window.localStorage.getItem("uname"));
-</script>
+    <h1>Community Tab</h1>
+   <h2>Find People Who Are Always In Your Corner<h2>
+    <br>
+   <div class="help-container">
+
+   
+   </div>
+   
 <br>
 <br>
 <br>

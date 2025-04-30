@@ -16,21 +16,19 @@ function renderEditableEntries() {
   
         entries.forEach((entry, index) => {
           const card = document.createElement("div");
-          card.className = "card mb-3";
+          card.className = "card";
           card.innerHTML = `
-            <div class="card-body">
-              <h5 class="card-title">${entry.title}</h5>
-              <p class="card-text">${entry.text}</p>
-              <p class="card-text"><small class="text-muted">Posted by ${user_data.uname}</small></p>
-              <button class="btn-delete" data-index="${index}">Delete</button>
-            </div>
+              <h2 >${entry.title}</h2>
+              <p >${entry.text}</p>
+              <p class="author">Entry from ${user_data.uname}</p>
+              <button class="btn-warning" data-index="${index}">Delete</button>
           `;
   
           container.appendChild(card);
         });
   
         // Attach delete button listeners
-        document.querySelectorAll('.btn-delete').forEach(button => {
+        document.querySelectorAll('.btn-warning').forEach(button => {
           button.addEventListener('click', function() {
             const index = this.getAttribute('data-index');
             confirmDelete(index);

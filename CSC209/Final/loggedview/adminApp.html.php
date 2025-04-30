@@ -1,11 +1,10 @@
-<!-- This view will mostly consist of styled forms that take in user input and dynamnically load in other cards into the container -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/postStyles.css">
+    <link href="../bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/postStyles.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg">
@@ -17,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="mainPage.html.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="loginPage.html.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="mainPageDark.html.php">Dark Mode</a>
@@ -55,54 +54,45 @@
     </div>
   </form>
 </div>
-<!-- start of page -->
 <h1>Admin Only View</h1>
 <center>
 <form method="post">
 <input type="submit" name="btn-data" value="Load User Data">
 </form>
 </center>
-
 <?php
-if(isset($_POST['btn-data'])){
+if (isset($_POST['btn-data'])) {
     countUsers();
 }
+
 function countUsers() {
-    $file_path = "outputFinal/users.json";
+    $base_path = "../outputFinal/";
+    $usernames = [];
 
-    // checking if file exists 
-    if (file_exists($file_path)) {
-        // read the whole file
-        $file_content = file_get_contents($file_path);
+    if (is_dir($base_path)) {
+        $folders = scandir($base_path);
 
-        // decode the JSON array of users
-        // true makes it into an array
-        $users = json_decode($file_content, true); 
+        foreach ($folders as $folder) {
+            // skip current and parent directory
+            if ($folder !== "." && $folder !== "..") {
+                $usernames[] = $folder;
+            } }
 
-        // counts all the users in the array
-        if (is_array($users)) {
-            $count = count($users);
+        $count = count($usernames);
 
-            echo "<br><center><h3> Total Users: </h3>" . $count . "<center><br>";
-            // actaully prints out the usernames if there are any
-            if ($count > 0) {
-                echo "<p> Usernames: </p>";
-                foreach ($users as $user) {
-                    if (isset($user["uname"])) {
-                        echo $user["uname"] . "<br>";
-                    }
-                }
-                echo "<p> Posts: </p>";
+        echo "<br><center><h3>Total Users:</h3> " . $count . "</center><br>";
+
+        if ($count > 0) {
+            echo "<center><p>Usernames:</p>";
+            foreach ($usernames as $uname) {
+                echo htmlspecialchars($uname) . "<center><br>";
             }
         }
+
     } else {
-        // prints out error 
-        echo " EROR: FILE DOES NOT EXIST";
+        echo "ERROR: Directory does not exist.";
     }
 }
-
-
-
 ?>
 </body>
 </html>

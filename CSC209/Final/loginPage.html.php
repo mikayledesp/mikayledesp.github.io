@@ -23,6 +23,9 @@
               <a class="nav-link" href="darkmode/loginPageDark.html.php">Dark Mode</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="loggedview/communityTab.html.php">Community</a>
+            </li>
+            <li class="nav-item">
           <button type="button" class="btn btn-warning"
           onclick="document.getElementById('id01').style.display='block'"
           >Login to Post</button>
@@ -81,7 +84,7 @@
 <br>
 <br>
 <p id="admin-text">Have an Admin account? Click below<p>
-<a id="admin-text" href="adminApp.html.php">Administrative view</a>
+<a id="admin-text" href="adminLogin.html.php">Administrative view</a>
 <br>
 <br>
 <p id="admin-text">Website by Mikayle Despaigne for CSC 209 </p>

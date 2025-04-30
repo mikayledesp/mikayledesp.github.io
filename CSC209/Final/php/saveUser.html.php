@@ -1,7 +1,5 @@
-<!-- office hours question -->
-<!-- how can i make it so that only the users posts show up when they log in and not all the posts that show up  -->
 <?php
-// Handdle initial user data
+
 $uname = $_POST["uname"];
 $pword_raw = $_POST["pword"];
 

@@ -20,7 +20,7 @@ function renderEntries() {
         card.innerHTML = `
           <h2>${entry.title}</h2>
           <p>${entry.text}</p>
-          <p class="author">Posted by ${user_data.uname}</p>
+          <p class="author">Entry from ${user_data.uname}</p>
         `;
 
         container.appendChild(card);

@@ -10,15 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user_data = json_decode(file_get_contents($user_file_path));
 
         if (isset($user_data->entries[$index])) {
-            array_splice($user_data->entries, $index, 1); // Remove the entry at the given index
+            array_splice($user_data->entries, $index, 1); 
             file_put_contents($user_file_path, json_encode($user_data));
             echo "Entry deleted successfully.";
-        } else {
-            echo "Invalid entry index.";
-        }
-    } else {
-        echo "User file does not exist.";
-    }
+        } 
+    } 
 } else {
     echo "Invalid request.";
 }

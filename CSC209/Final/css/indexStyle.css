@@ -93,6 +93,9 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
+  #validate{
+    width: 50% !important;
+  }
   
 #btn-modal {
      background-color:#E2C27D;
