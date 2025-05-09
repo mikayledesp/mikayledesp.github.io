@@ -44,3 +44,4 @@ https://www.w3schools.com/js/js_api_fetch.asp
 https://www.w3schools.com/js/js_window.asp
 https://www.w3schools.com/php/php_form_validation.asp 
 https://stackoverflow.com/questions/18213026/delete-element-from-json-with-php 
+used these resources in the php to fetch the posts from users. 
