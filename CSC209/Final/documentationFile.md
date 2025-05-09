@@ -26,7 +26,7 @@ Using java script for button and modal aniomations on posts and login forms
  ### Interactive Feautre 
 Light and dark mode via button on site  
 
-Admin  
+Admin  can be acessed on main page and deletes users 
 
  ### Local Communication : 
  Being able to delete and post data entries which communicated from server to clientside 
