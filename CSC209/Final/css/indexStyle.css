@@ -216,7 +216,7 @@ input[type=text], input[type=password] {
     background-color: #DD97BC;
     width: 300px;
     padding: 1.5rem;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     color: white;
     font-family: "Figtree", sans-serif;
