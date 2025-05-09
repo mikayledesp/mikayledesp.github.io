@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Community Posts</title>
   <link href="../bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/indexStyle.css">
+  <link rel="stylesheet" href="../css/comminity.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">

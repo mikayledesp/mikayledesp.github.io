@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    font-family: "Figtree", sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1694698955114-82c37b89f961?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+
+}
+.navbar{
+background-color:rgba(255, 192, 203, 0);
+}
+
+h1{
+    text-align: center;
+    color: #191919;
+    font-weight: 950;
+    font-size: 76px;
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+    color:  #1B1B1B;
+    font-weight: 750;
+    font-size: 45px;
+}
+h3{
+  text-align: left;
+    color: rgb(72, 68, 68)1B;
+    font-weight: 600;
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+hr{
+  width: 75%;
+  text-align: center;
+}
+
+.navbar-brand{
+    font-weight: 500;
+}
+
+.navbar-text{
+  margin: top 5px; 
+}
+
+.diary-title{
+    color: white;
+}
+.btn-warning{
+background-color: white;
+border: #E2C27D;
+}
+.author{
+    color: gainsboro;
+    margin: top 20px; ;
+}
+#btn-darkmode{
+    --bs-btn-padding-y: .75rem; 
+    --bs-btn-padding-x: 1.5rem; 
+    --bs-btn-font-size: 1rem;
+    background-color: #da4a97;
+    margin: 2rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color:white;
+}
+#btn-view-past{
+    --bs-btn-padding-y: .75rem; 
+    --bs-btn-padding-x: 1.5rem; 
+    --bs-btn-font-size: 1rem;
+    background-color: #da4a97 ;
+    margin: 2rem;
+
+}
+#btn-view-past:hover, #btn-view-past:focus, #btn-darkmode:hover,#btn-darkmode:focus{
+  background-color:#E2C27D !important ;
+  transform: translateY(-1px) !important;
+
+}
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* All Modal Styling taken from w3 schools */
+
+/* Full-width input fields for modal */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  #validate{
+    width: 50% !important;
+  }
+  
+#btn-modal {
+     background-color:#E2C27D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.pword {
+    float: right;
+    padding-top: 16px;
+  }
+
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.pword {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  
+  /* Card Styling */
+  #cardGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .card {
+    background-color: #CD97DD;
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    color: white;
+    font-family: "Figtree", sans-serif;
+    text-overflow: clip;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: #97DDD1 ;
+  }
+  
+  .card h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  .card .author {
+    font-size: 0.9rem;
+    color: gainsboro;
+    margin-top: 1rem;
+  }
+  
+  #admin-text{
+    color: white;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+ .graphics{
+  display: flex;
+  justify-content: center;
+  }
+  #header-image-menu img{
+    width: 100%;
+    margin: none;
+    padding: none;
+}
+.content{
+  text-align: left !important;
+  margin-top: 18px;
+  margin-left: 2px;
+}
+#title{
+  text-align: left !important;
+  font-size: 45px !important;
+}
+.subtitle{
+  color: #545151;
+  font-size: x-small;
+  margin-left: 2px;
+}
+.text{
+font-weight: 500;
+font-size: 20px;
+margin-left: 35px;
+margin-top: 15px;
+}
+.link{
+  margin-left: 40px !important;
+  color: white;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;}
+#longlink:hover{
+  box-shadow: inset 800px 0 0 0 #da4a97 !important;
+}
+.link:hover{
+  text-decoration: none;
+  box-shadow: inset 300px 0 0 0 #da4a97;
+  color:  #1B1B1B;
+}
+li{
+  color: white;
+}
+#heading{
+  margin-left: 35px;
+  margin-top: 15px;
+}
+
+.help{
+  border: #545151 solid 2px;
+}
+.list-group{
+  width: 65%;
+  margin-left: 10px;
+}
